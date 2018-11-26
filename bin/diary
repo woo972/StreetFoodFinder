@@ -1,0 +1,39 @@
+
+- Cannot load JDBC driver class 'com.mysql.jdbc.Driver'
+=> https://www.concretepage.com/questions/171
+
+- connect mysql in azure portal
+=> mysql --host <fully qualified server name> --user <server admin login name>@<server name> -p
+   mysql --host mysql-wowls-wordchain-dev.mysql.database.azure.com --user wowlsadm@mysql-wowls-wordchain-dev -p
+   amd2018!@#
+   
+- custom deployment folder
+=> https://blogs.msdn.microsoft.com/azureossds/2015/12/17/custom-deployment-folder-on-azure-web-apps-with-git/
+
+- file structure
+=> https://github.com/projectkudu/kudu/wiki/File-structure-on-azure
+
+
+- Client with IP address '112.168.65.47' is not allowed to connect to this MySQL server.
+=> https://www.thegeekstuff.com/2010/08/allow-mysql-client-connection/
+
+
+- Communications link failure
+The last packet successfully received from the server was 20 milliseconds ago.  The last packet sent successfully to the server was 19 milliseconds ago.
+=> 원인불명 / JDBC 드라이버 체크, 연결 시도 시간 연장 등등 시도해볼 것 
+=> http://blog.netgloo.com/2015/07/09/spring-boot-communications-link-failure-with-mysql-and-hibernate/
+
+
+vm1-wowls-wordchain-dev
+wowlsadm / wowlsadm2018!@#
+
+vm2-wowls-wordchain-dev
+wowlsadm / wowlsadm2018!@#
+
+mysql-wowls-wordchain-dev.mysql.database.azure.com
+wowlsadm / adm2018!@#
+
+
+- 로그 보기 (kudu 사용, kude 서비스 가격 확인할 것)
+=> https://webapp-wowls-wordchain-dev.scm.azurewebsites.net/DebugConsole
+   로그인  후  tail -f D:\home\site\wwwroot\WordChain.log

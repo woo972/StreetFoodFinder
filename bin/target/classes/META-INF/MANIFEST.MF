@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: WordChain
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: woo
+Implementation-Vendor-Id: com.wowls
+Build-Jdk: 1.8.0_181-1-ojdkbuild
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/WordChain
+Created-By: Maven Integration for Eclipse
+

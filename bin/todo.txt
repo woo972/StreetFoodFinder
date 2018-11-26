@@ -1,0 +1,64 @@
+0. 문서
+	가. 게임 소개 PPT
+	나. 사업계획서
+	다. WBS 초안
+1. 플레이
+	가. 단어 DB
+		- 국립국어원 문의		
+	나. 참가자 싱크 (참고: https://www.cakesolutions.net/teamblogs/how-does-multiplayer-game-sync-their-state-part-1)
+		- A유저의 입력 결과를 받기전 B유저의 입력이 일어나면? -> 완전 턴제 게임으로 할 것인가? 그렇다면 아이템 사용은?
+		- 
+2. 플레이 외 
+	가. 게임 결과 저장(콤보수, 최종점수 등)
+		1) 게임 플레이 시작 시 roomID를 가진 Map을 생성하여 일정 주기마다 갱신한다 -> 로직이 지저분해지지 않을까?
+		2) 게임 플레이 시작 시 roomID를 가진 Map을 생성하여 매번 갱신한다 -> 너무 느리지 않나?
+		3) 게임 종료 후 한 번에 결과를 저장한다 -> 중간에 튕기거나 데이터 조작 가능성?
+	나. 게임 매칭
+		1) 매칭 알고리즘을 어떻게 할 것인가?  (매칭을 위한 Queue 구현)
+3. 아이템
+	가. 아이템 구매 구현		 
+	나. 
+4. 
+5. 기타
+	가) 인증 / 권한
+		- 스프링 시큐리티
+	나) 로깅
+		- 로거 구현
+		- 로깅 대상 파악: 로그인 시, 게임 매칭 시작 시, 캐쉬 관련 트랜잭션 발생 시, 클릭 트래킹
+	다) DB (참고: https://www.slideshare.net/choijaekyu/kgc2014-41160962)
+		1)name rule
+			- cd : code
+			- nm : name
+			- fl : flag (y/n)
+			- cnt : count
+			- amt : amount
+			- no : number
+			- pw : password
+			- nick : nickname
+			- hi : high (highest)
+			- lo : low (lowest)
+		2) 필요 테이블   * ERD만들기
+			가) 회원정보
+				- user_id, user_pw, user_nick, user_email, gender, cre_time, upd_time
+			나) 친구목록
+				- user_id, friend_id, cre_time, upd_time
+			다) 전적
+				- user_id, level, exp, play_time, play_game_cnt, hi_score, hi_combo, cre_time, upd_time ...
+			라) 캐쉬
+				- user_id, total_used_cash, remain_cash, cre_time, upd_time ...
+			마) 보유 아이템
+				- user_id, item_cd, remain_item_amt, cre_time, upd_time ...
+			바) 결재내역
+				- user_id, used_cash, cre_time, upd_time ... 
+			사) 아이템 마스터
+				- item_cd, item_nm, item_type, price, effect_target, effect_rslt, cre_time, upd_time
+			아)	맵 마스터
+				- map_cd, map_nm, map_type, ...
+			자) 블록 마스터
+				- block_cd, block_nm, block_type, ...
+			차) 단어 마스터
+				- word, meaning, type, cre_time, upd_time
+				
+				
+		
+

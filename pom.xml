@@ -4,8 +4,8 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.wowls</groupId>
-	<artifactId>WordChain</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>StreetFoodFinder</artifactId>
+	<version>0.0.1</version>
 	<packaging>jar</packaging>
 
 	<name>WordChain</name>

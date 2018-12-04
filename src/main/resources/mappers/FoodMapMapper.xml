@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wowls.sff.mapper.FoodMapMapper">
+ 
+<select id="showStoreList" parameterType="java.util.Map" resultType="java.util.Map">
+	select store_id, owner_id, store_name, store_desc, store_lat, store_lon from store_info
+</select>
+ 
+</mapper>

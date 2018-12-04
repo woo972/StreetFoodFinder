@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.wowls</groupId>
-	<artifactId>WordChain</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>StreetFoodFinder</artifactId>
+	<version>0.0.1</version>
 	<packaging>jar</packaging>
 
-	<name>WordChain</name>
-	<description>wordchain project </description>
+	<name>StreetFoodFinder</name>
+	<description>StreetFoodFinder project </description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

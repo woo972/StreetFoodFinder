@@ -3,23 +3,6 @@
 
 <mapper namespace="com.wowls.sff.mapper.PaymentMapper">
 
-<select id="showItemList" resultType="java.util.Map">
-	select item_name, price, visible_flag from item_master 
-</select>
 
-<select id="showOwnItemList" parameterType="java.util.Map" resultType="java.util.Map">
-	select b.item_name, a.item_qty
-  	  from own_item a
- left join item_master b
-	    on a.item_id = b.item_id
-</select>
-
-<select id="checkItemQty" parameterType="java.util.Map" resultType="int">
-	select item_qty from own_item where user_id = #{user_id} and item_id = #{item_id}
-</select>
-
-<select id="useItem" parameterType="java.util.Map" resultType="int">
-	update own_item set itemQty = itemQty-1 where user_id = #{user_id} and item_id = #{item_id}
-</select>
  
 </mapper>

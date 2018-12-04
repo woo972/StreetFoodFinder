@@ -1,0 +1,25 @@
+package com.wowls.sff.service;
+
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.wowls.sff.mapper.FoodMapMapper;
+
+@Service
+public class FoodMapService {
+	
+	@Autowired
+	private FoodMapMapper foodMapMapper;
+	
+
+	public Map<String,String> showCoordinate(Map<String, String> foodMapMap) {
+		return null;
+	}
+
+	public List<Map<String,Object>> showStoreList(Map<String, String> foodMapMap) {
+		return foodMapMapper.showStoreList(foodMapMap);
+	}
+}

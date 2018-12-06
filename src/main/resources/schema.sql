@@ -3,10 +3,12 @@
  * 1: admin
  * 2: store master
  * 3: consumer
+ * 
+ * 주소 쿼리스트링 사용을 위해 쿼리스트링에 사용될 특수문자는 디비에 저장되지 않도록 막아야함
  */
 
 drop table if exists user_info;
-create table user_info (
+create  table user_info (
 	user_id varchar(20) not null, 
 	user_pw varchar(20) not null, 
 	user_name varchar(20),	

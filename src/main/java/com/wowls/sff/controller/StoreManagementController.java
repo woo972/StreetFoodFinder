@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.wowls.sff.service.StoreManagementService;
 
 @RestController
-@RequestMapping("/storeManagement/*")
+@RequestMapping("/storeManagement*")
 public class StoreManagementController {
 	
 	@Autowired

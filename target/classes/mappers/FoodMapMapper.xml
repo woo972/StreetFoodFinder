@@ -4,7 +4,16 @@
 <mapper namespace="com.wowls.sff.mapper.FoodMapMapper">
  
 <select id="showStoreList" parameterType="java.util.Map" resultType="java.util.Map">
-	select store_id, owner_id, store_name, store_desc, store_lat, store_lon from store_info
+	select store_info.store_id,
+		   store_info.owner_id,
+		   store_info.store_name,
+		   store_info.store_desc, 
+		   store_info.store_lat, 
+		   store_info.store_lon 
+	from store_info 
+	join menu_info
+	on store_info.store_id = menu_info.store_id
+	where menu_info.menu_name=#{foods}
 </select>
  
 </mapper>

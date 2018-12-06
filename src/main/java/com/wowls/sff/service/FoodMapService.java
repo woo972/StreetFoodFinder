@@ -22,4 +22,6 @@ public class FoodMapService {
 	public List<Map<String,Object>> showStoreList(Map<String, String> foodMapMap) {
 		return foodMapMapper.showStoreList(foodMapMap);
 	}
+	
+	
 }

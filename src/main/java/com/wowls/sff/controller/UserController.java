@@ -27,7 +27,7 @@ import com.wowls.sff.vo.UserVo;
  */
 
 @RestController
-@RequestMapping("/users/*")
+@RequestMapping("/users*")
 public class UserController {
 
 	@Autowired
@@ -39,14 +39,14 @@ public class UserController {
 	}
 
 	// sign up
-	@PostMapping("/")
+	@PostMapping
 	public ResponseEntity<Void> saveUserInfo(@RequestBody Map<String,String> userMap) {
 		userService.saveUserInfo(userMap);
 		return new ResponseEntity<>(HttpStatus.CREATED);
 	}
 	
 	// get all user list
-	@GetMapping("/")
+	@GetMapping
 	public ResponseEntity<List<Map<String,String>>> showUserList() {
 		return new ResponseEntity<>(userService.showUserList(),HttpStatus.OK);
 	}

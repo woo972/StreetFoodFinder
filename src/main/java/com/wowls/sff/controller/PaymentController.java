@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.wowls.sff.service.PaymentService;
 
 @RestController
-@RequestMapping("/payment/*")
+@RequestMapping("/payment*")
 public class PaymentController {
 
 	@Autowired

@@ -1,6 +1,5 @@
 package com.wowls.sff.controller;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -9,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -37,14 +35,14 @@ public class FoodMapController {
 	public ResponseEntity<List<Map<String,Object>>> showStoreList(
 			@RequestParam(value="lat",required=false) String lat,
 			@RequestParam(value="lon",required=false) String lon,
-			@RequestParam(value="foods",required=false) String foods) {
+			@RequestParam(value="menus",required=false) String menus) {
 		// url에 배열로 넘기기 가능한가? 나중에 in 조건에 넣도록
 		// 붕어빵이든 크림붕어빵이든 검색되게 하려면? like 또는 대분류를 붕어빵으로 
 		
 		Map<String,String> foodMapMap = new HashMap<String,String>();
 		foodMapMap.put("lat",lat);
 		foodMapMap.put("lon",lon);
-		foodMapMap.put("foods",foods);
+		foodMapMap.put("menus",menus);
 		
 		
 		

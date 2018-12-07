@@ -9,11 +9,13 @@
 		   store_info.store_name,
 		   store_info.store_desc, 
 		   store_info.store_lat, 
-		   store_info.store_lon 
+		   store_info.store_lon,
+		   menu_info.menu_name,
+		   menu_info.menu_price,
+		   menu_info.unit 
 	from store_info 
 	join menu_info
-	on store_info.store_id = menu_info.store_id
-	where menu_info.menu_name=#{foods}
+	on store_info.store_id = menu_info.store_id	
 </select>
  
 </mapper>

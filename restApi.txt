@@ -1,1 +1,37 @@
+{}안에는 실제 값이 들어감
 
+[점포 검색 (search 뒤에 오는 query string은 옵션)]
+- 좌표 위치로 점포 검색(현재는 반경 검색 안됨)
+get localhost:8080/stores/search?lat={lat}&lon={lon} 
+- 메뉴로 점포 검색
+get localhost:8080/stores/search?menus={menu-name}
+
+[점포 관리]
+- 점주가 소유한 점포 조회
+get localhost:8080/store-management/owners/{owner-id} 
+- 점포의 메뉴 조회
+get localhost:8080/store-management/owners/{owner-id}/stores/{store-id}
+- 점포 등록
+post localhost:8080/store-management/owners/{owner-id}/
+	 -> body {storeId, ownerId, storeName, storeDesc, storeLat, storeLon}
+- 메뉴 등록
+post localhost:8080/store-management/stores/{store-id}/
+	 -> body {storeId, menuName, menuPrice, unit}
+- 점포 정보 수정
+- 메뉴 정보 수정
+- 점포 정보 삭제
+- 메뉴 정보 삭제
+
+[사용자 관리]
+- 모든 사용자 조회
+get localhost:8080/users
+- 특정 사용자 조회
+get localhost:8080/users/{user-id}
+- 회원가입
+post localhost:8080/users
+	 -> body {userId, userPw, userName, userType}
+- 회원정보 수정
+put localhost:8080/users/{user-id}
+	 -> body {userId, userPw, userName, userType}
+- 특정 회원 삭제
+delete localhost:8080/users/{userId}

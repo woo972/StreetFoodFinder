@@ -30,7 +30,6 @@ public class FoodMapController {
 //		return new ResponseEntity<>(foodMapService.showCoordinate(foodMapMap),HttpStatus.OK);
 //	}
 	
-	
 	@GetMapping("/search")
 	public ResponseEntity<List<Map<String,Object>>> showStoreList(
 			@RequestParam(value="lat",required=false) String lat,
@@ -43,9 +42,6 @@ public class FoodMapController {
 		foodMapMap.put("lat",lat);
 		foodMapMap.put("lon",lon);
 		foodMapMap.put("menus",menus);
-		
-		
-		
 		return new ResponseEntity<>(foodMapService.showStoreList(foodMapMap),HttpStatus.OK);
 	}
 }

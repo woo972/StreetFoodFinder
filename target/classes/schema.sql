@@ -12,7 +12,9 @@ create  table user_info (
 	user_id varchar(20) not null, 
 	user_pw varchar(20) not null, 
 	user_name varchar(20),	
-	user_type varchar(3)
+	user_type varchar(3),
+	cre_date varchar(8),
+	upd_date varchar(8)
 );
 alter table user_info add primary key (user_id);
 
@@ -27,7 +29,9 @@ create table store_info (
 	store_name varchar(20),
 	store_desc varchar(100),
 	store_lat float,
-	store_lon float
+	store_lon float,
+	cre_date varchar(8),
+	upd_date varchar(8)	
 );
 alter table store_info add primary key (store_id);
 
@@ -37,10 +41,60 @@ alter table store_info add primary key (store_id);
  */
 drop table if exists menu_info;
 create table menu_info (
-	store_id varchar(20) not null, 
+	store_id varchar(20) not null,
+	menu_type1 varchar(20),
+	menu_type2 varchar(20),
 	menu_name varchar(20) not null,	
 	menu_price integer not null,
-	unit varchar(10) not null
+	unit varchar(10) not null,
+	cre_date varchar(8),
+	upd_date varchar(8)
 );
 alter table menu_info add primary key (store_id, menu_name);
 
+
+drop table if exists favorite;
+create table favorite (
+	user_id varchar(20) not null,
+	store_id varchar(20) not null,
+	cre_date varchar(8)	
+);
+alter table favorite add primary key (user_id,store_id);
+
+
+/*board_id, reply_id 등은 시퀀스로??
+ * 
+ */
+--drop table if exists notice;
+--create table notice (
+--	writer_id varchar(20) not null,
+--	notice_id varchar(20) not null,
+--	title varchar(20) not null,
+--	content varchar(500),
+--	cre_date varchar(8),
+--	upd_date varchar(8)
+--); 
+--alter table notice add primary key (notice_id);
+
+drop table if exists board;
+create table board (
+	writer_id varchar(20) not null,
+	board_id varchar(20) not null,
+	title varchar(20) not null,
+	content varchar(500),
+	cre_date varchar(8),
+	upd_date varchar(8)
+	
+);
+alter table board add primary key (board_id);
+
+drop table if exists reply;
+create table reply (
+	writer_id varchar(20) not null,
+	board_id varchar(20) not null,
+	reply_id varchar(20) not null,
+	content varchar(500),
+	cre_date varchar(8),
+	upd_date varchar(8)
+);
+alter table reply add primary key (reply_id);

@@ -12,7 +12,7 @@ public class StoreManagementService {
 
 	private StoreManagementMapper storeManagementMapper;
 
-	public void saveStoreInfoInfo(Map<String, Object> storeMap) {
+	public void saveStoreInfoInfo(Map<String, String> storeMap) {
 		storeManagementMapper.saveStoreInfoInfo(storeMap);
 	}
 	

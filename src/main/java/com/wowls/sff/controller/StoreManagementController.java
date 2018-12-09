@@ -27,7 +27,9 @@ public class StoreManagementController {
 	// 가게 등록 
 	@PostMapping("/owners/{ownerId}")
 	public ResponseEntity<List<Map<String,String>>> saveStoreInfo(@PathVariable("ownerId") String ownerId,
-			@RequestBody Map<String,Object> storeMap) {
+																  @RequestBody Map<String,String> storeMap) {
+		System.out.println("owner:"+ownerId);
+		System.out.println("storemap:"+storeMap);
 		storeMap.put("ownerId", ownerId);
 		storeManagementService.saveStoreInfoInfo(storeMap);
 		return new ResponseEntity<>(HttpStatus.CREATED);
@@ -36,7 +38,7 @@ public class StoreManagementController {
 	// 특정 가게에 메뉴 등록 
 	@PostMapping("/stores/{storeId}")
 	public ResponseEntity<List<Map<String,String>>> saveMenuInfo(@PathVariable("storeId") String storeId,
-			@RequestBody Map<String,Object> menuMap) {
+																 @RequestBody Map<String,Object> menuMap) {
 		menuMap.put("storeId", storeId);
 		storeManagementService.saveMenuInfo(menuMap);
 		return new ResponseEntity<>(HttpStatus.CREATED);

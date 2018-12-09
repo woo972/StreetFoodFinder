@@ -26,8 +26,8 @@ create table store_info (
 	owner_id varchar(20) not null,
 	store_name varchar(20),
 	store_desc varchar(100),
-	store_lat varchar(20),
-	store_lon varchar(20)
+	store_lat float,
+	store_lon float
 );
 alter table store_info add primary key (store_id);
 

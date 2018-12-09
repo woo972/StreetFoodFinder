@@ -14,7 +14,7 @@
 		   menu_info.menu_price,
 		   menu_info.unit 
 	from store_info 
-	join menu_info
+	left join menu_info
 	on store_info.store_id = menu_info.store_id	
 </select>
  

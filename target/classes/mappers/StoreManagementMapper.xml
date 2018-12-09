@@ -3,15 +3,15 @@
 
 <mapper namespace="com.wowls.sff.mapper.StoreManagementMapper">
 
-<select id="saveStoreInfo" parameterType="java.util.Map" >
+<insert id="saveStoreInfo" parameterType="java.util.Map" >
 	insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon)
 	values(#{storeId}, #{ownerId}, #{storeName}, #{storeDesc}, #{storeLat}, #{storeLon})
-</select>
+</insert>
 
-<select id="saveMenuInfo" parameterType="java.util.Map" >
+<insert id="saveMenuInfo" parameterType="java.util.Map" >
 	insert into menu_info (store_id, menu_name, menu_price, unit)
 	values(#{storeId}, #{menuName}, #{menuPrice}, #{unit})
-</select>
+</insert>
 
 <select id="showOwnStoreList" parameterType="java.util.Map" resultType="java.util.Map">
 	select store_id, owner_id, store_name, store_desc, store_lat, store_lon from store_info where owner_id = #{ownerId}
@@ -21,7 +21,7 @@
 	select store_id, menu_name, menu_price, unit from menu_info where store_id = #{storeId}
 </select>
 
-<select id="modifyStoreInfo" parameterType="java.util.Map" >
+<update id="modifyStoreInfo" parameterType="java.util.Map" >
 	update store_info 
 		set=store_name=#{storeName},
 		    store_desc=#{storeDesc},
@@ -29,11 +29,11 @@
 		    store_lon=#{storeLon}
 		where store_id=#{storeId}
 	
-</select>
+</update>
 
-<select id="modifyMeunuInfo" parameterType="java.util.Map" >
+<update id="modifyMeunuInfo" parameterType="java.util.Map" >
 	insert into menu_info (store_id, menu_name, menu_price, unit)
 	values(#{store_id}, #{menu_name}, #{menu_price}, #{unit})
-</select>
+</update>
 
 </mapper>

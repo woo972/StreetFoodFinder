@@ -33,6 +33,4 @@ public class UserService {
 	public void removeUser(Map<String,String> paramMap) {
 		userMapper.removeUser(paramMap);
 	}
-	
-	
 }

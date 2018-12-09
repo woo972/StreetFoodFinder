@@ -1,9 +1,9 @@
 
-insert into user_info (user_id, user_pw, user_name,user_type) values ('adm', '1', 'adm', 'adm');
-insert into user_info (user_id, user_pw, user_name,user_type) values ('pro1', '1', 'provider1','pro');
-insert into user_info (user_id, user_pw, user_name,user_type) values ('pro2', '1', 'provider2','pro');
-insert into user_info (user_id, user_pw, user_name,user_type) values ('con1', '1', 'consumer1','con');
-insert into user_info (user_id, user_pw, user_name,user_type) values ('con2', '1', 'consumer2','con');
+insert into user_info (user_id, user_pw, user_name,user_type) values ('adm', '1', 'adm', 'ADM');
+insert into user_info (user_id, user_pw, user_name,user_type) values ('pro1', '1', 'provider1','PRO');
+insert into user_info (user_id, user_pw, user_name,user_type) values ('pro2', '1', 'provider2','PRO');
+insert into user_info (user_id, user_pw, user_name,user_type) values ('con1', '1', 'consumer1','CON');
+insert into user_info (user_id, user_pw, user_name,user_type) values ('con2', '1', 'consumer2','CON');
 
 insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon) 
 values ('store1','pro1','store1','this is store1',37.497944,127.027618);

@@ -26,19 +26,17 @@ public class StoreManagementController {
 	
 	// 가게 등록 
 	@PostMapping("/owners/{ownerId}")
-	public ResponseEntity<List<Map<String,String>>> saveStoreInfo(@PathVariable("ownerId") String ownerId,
+	public ResponseEntity<List<Map<String,Object>>> saveStoreInfo(@PathVariable("ownerId") String ownerId,
 																  @RequestBody Map<String,String> storeMap) {
-		System.out.println("owner:"+ownerId);
-		System.out.println("storemap:"+storeMap);
 		storeMap.put("ownerId", ownerId);
-		storeManagementService.saveStoreInfoInfo(storeMap);
+		storeManagementService.saveStoreInfo(storeMap);
 		return new ResponseEntity<>(HttpStatus.CREATED);
 	}		
 	
 	// 특정 가게에 메뉴 등록 
 	@PostMapping("/stores/{storeId}")
-	public ResponseEntity<List<Map<String,String>>> saveMenuInfo(@PathVariable("storeId") String storeId,
-																 @RequestBody Map<String,Object> menuMap) {
+	public ResponseEntity<List<Map<String,Object>>> saveMenuInfo(@PathVariable("storeId") String storeId,
+																 @RequestBody Map<String,String> menuMap) {
 		menuMap.put("storeId", storeId);
 		storeManagementService.saveMenuInfo(menuMap);
 		return new ResponseEntity<>(HttpStatus.CREATED);
@@ -46,7 +44,7 @@ public class StoreManagementController {
 	
 	// 점주가 보유한 가게 목록 가져오기
 	@GetMapping("/owners/{ownerId}")
-	public ResponseEntity<List<Map<String,String>>> showStoreList(@PathVariable("ownerId") String ownerId) {
+	public ResponseEntity<List<Map<String,Object>>> showStoreList(@PathVariable("ownerId") String ownerId) {
 		Map<String,String> storeManagementMap = new HashMap<String,String>();
 		storeManagementMap.put("ownerId", ownerId);
 		return new ResponseEntity<>(storeManagementService.showOwnStoreList(storeManagementMap),HttpStatus.OK);
@@ -54,7 +52,7 @@ public class StoreManagementController {
 	
 	// 가게가 보유한 메뉴 가져오기
 	@GetMapping("/stores/{storeId}")
-	public ResponseEntity<List<Map<String,String>>> showOwnMenuList(@PathVariable("ownerId") String ownerId,
+	public ResponseEntity<List<Map<String,Object>>> showOwnMenuList(@PathVariable("ownerId") String ownerId,
 																    @PathVariable("storeId") String storeId) {
 		Map<String,String> storeManagementMap = new HashMap<String,String>();
 		storeManagementMap.put("ownerId", ownerId);
@@ -62,21 +60,33 @@ public class StoreManagementController {
 		return new ResponseEntity<>(storeManagementService.showOwnMenuList(storeManagementMap),HttpStatus.OK);
 	}
 	
-	// 가게 정보 수정 
-	@PutMapping("/owners/{ownerId}")
-	public ResponseEntity<List<Map<String,String>>> modifyStoreInfo(@PathVariable("ownerId") String ownerId,
-															 	    @RequestBody Map<String,Object> storeMap) {
-		storeMap.put("ownerId", ownerId);
+	// 가게 정보 / 메뉴 정보 수정 
+	@PutMapping("/stores/{storeId}")
+	public ResponseEntity<List<Map<String,Object>>> modifyStoreInfo(@PathVariable("storeId") String storeId,
+															 	    @RequestBody Map<String,String> storeMap) {
+		storeMap.put("storeId", storeId);
 		storeManagementService.modifyStoreInfo(storeMap);
+		storeManagementService.modifyMenuInfo(storeMap);
 		return new ResponseEntity<>(HttpStatus.CREATED);
 	}		
 	
-	// 메뉴 수정 
-	@PutMapping("/stores/{storeId}")
-	public ResponseEntity<List<Map<String,String>>> modifyMenuInfo(@PathVariable("storeId") String storeId,
-																   @RequestBody Map<String,Object> menuMap) {
-		menuMap.put("storeId", storeId);
-		storeManagementService.modifyMenuInfo(menuMap);
-		return new ResponseEntity<>(HttpStatus.CREATED);
-	}		
+//	// 가게 정보 삭제
+//	@DeleteMapping("/owners/{ownerId}/stores/{storeId}")
+//	public ResponseEntity<List<Map<String,Object>>> removeOwnStoreInfo(@PathVariable("ownerId") String ownerId,
+//																	   @PathVariable("storeId") String storeId) {
+//		Map<String,String> storeManagementMap = new HashMap<String,String>(); 
+//		storeManagementMap.put("ownerId", ownerId);
+//		storeManagementMap.put("storeId", storeId);
+//		return new ResponseEntity<>(storeManagementService.showOwnMenuList(storeManagementMap),HttpStatus.OK);
+//	}
+//	
+//	// 메뉴 정보 삭제 
+//	@DeleteMapping("/stores/{storeId}/menus/")
+//	public ResponseEntity<List<Map<String,Object>>> modifyStoreInfo(@PathVariable("storeId") String storeId,
+//																    @RequestBody Map<String,String> storeMap) {
+//		storeMap.put("storeId", storeId);
+//		storeManagementService.modifyStoreInfo(storeMap);
+//		storeManagementService.modifyMenuInfo(storeMap);
+//		return new ResponseEntity<>(HttpStatus.CREATED);
+//	}		
 }

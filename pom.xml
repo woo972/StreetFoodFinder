@@ -4,8 +4,8 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.wowls</groupId>
-	<artifactId>StreetFoodFinder</artifactId>
-	<version>0.0.1</version>
+	<artifactId>sff</artifactId>
+	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
 	<name>WordChain</name>
@@ -82,6 +82,9 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+	        	<configuration>
+	          		<executable>true</executable>
+	        	</configuration>
 			</plugin>
 		</plugins>
 	</build>

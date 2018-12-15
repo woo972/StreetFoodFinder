@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.wowls.sff.service.UserService;
-import com.wowls.sff.vo.UserVo;
 
 /* 필요 메서드 
  * 1. admin 용

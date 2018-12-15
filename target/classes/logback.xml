@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 1분 마다 설정 파일의 변경을 확인한다. 파일이 변경되면 다시 로딩한다 -->
+<configuration scan="true" scanPeriod="1 minutes">
+
+	<property value="./log" name="LOG_FILE_PREFIX"/>
+	
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<charset>UTF-8</charset>
+            <pattern> %d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+		</encoder>
+    </appender>
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<encoder>
+			<charset>UTF-8</charset>
+            <pattern> %d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+		</encoder>
+		<file>${LOG_FILE_PREFIX}/sff.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${LOG_FILE_PREFIX}/sff_%d{yyyyMMdd}.%i.log</fileNamePattern>
+	        <maxHistory>30</maxHistory>
+	        <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+	          	<maxFileSize>100mb</maxFileSize>
+	        </timeBasedFileNamingAndTriggeringPolicy>			
+		</rollingPolicy>
+    </appender>
+    
+ 	<springProfile name="LOCAL">
+		<logger name="com.wowls.sff" level="DEBUG" />
+		<root level="INFO">
+			<appender-ref ref="CONSOLE"/>
+		</root>	
+	</springProfile>
+	<springProfile name="!LOCAL">
+		<logger name="com.wowls.sff" level="DEBUG" />
+		<root level="INFO">
+			<appender-ref ref="CONSOLE"/>
+			<appender-ref ref="FILE"/>
+		</root>	
+	</springProfile>
+	
+</configuration>
+
+

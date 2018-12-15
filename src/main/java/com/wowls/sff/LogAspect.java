@@ -5,13 +5,15 @@ import java.util.Arrays;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 @Aspect
 @Component
 public class LogAspect {
 	
-//	private static final Logger logger = LoggerFactory.getLogger(LogAspect.class);
+	private static final Logger logger = LoggerFactory.getLogger(LogAspect.class);
 	
 	
 //	private BufferedWriter bw; 
@@ -20,11 +22,16 @@ public class LogAspect {
 //	private Date d;
 //	private SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 	
+	
 	// 컨트롤러가 정의한 모든 메서드
 	@Before("execution(* com.wowls.sff.controller..*(..))")
 	public void berforeLog(JoinPoint joinPoint) {
-		System.err.println("method:"+joinPoint.getSignature().getName()
-							+" args:"+Arrays.asList(joinPoint.getArgs())); 
+		logger.info("### method : {} / args : {}", 
+					joinPoint.getSignature().toShortString(),
+					Arrays.asList(joinPoint.getArgs()));
+		
+//		System.err.println("method:"+joinPoint.getSignature().getName()
+//							+" args:"+Arrays.asList(joinPoint.getArgs())); 
 		
 //		try {
 //			bw = new BufferedWriter(new FileWriter(new File(filePath+fileName), true));

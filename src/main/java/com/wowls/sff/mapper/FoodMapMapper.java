@@ -9,4 +9,6 @@ import org.apache.ibatis.annotations.Mapper;
 public interface FoodMapMapper {
 	List<Map<String,Object>> showStoreList(Map<String, String> foodMapMap);
 
+	Map<String, Object> showStoreInfo(Map<String, String> foodMapMap);
+
 }

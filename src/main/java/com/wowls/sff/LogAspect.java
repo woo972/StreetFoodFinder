@@ -30,9 +30,6 @@ public class LogAspect {
 					joinPoint.getSignature().toShortString(),
 					Arrays.asList(joinPoint.getArgs()));
 		
-//		System.err.println("method:"+joinPoint.getSignature().getName()
-//							+" args:"+Arrays.asList(joinPoint.getArgs())); 
-		
 //		try {
 //			bw = new BufferedWriter(new FileWriter(new File(filePath+fileName), true));
 //			d = new Date();

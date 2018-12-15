@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -43,6 +44,13 @@ public class FoodMapController {
 		foodMapMap.put("lon",lon);
 		foodMapMap.put("menus",menus);
 		return new ResponseEntity<>(foodMapService.showStoreList(foodMapMap),HttpStatus.OK);
+	}
+	
+	@GetMapping("/{storeId}")
+	public ResponseEntity<Map<String,Object>> showStoreInfo(@PathVariable("storeId") String storeId){
+		Map<String,String> foodMapMap = new HashMap<String,String>();
+		foodMapMap.put("storeId",storeId);
+		return new ResponseEntity<>(foodMapService.showStoreInfo(foodMapMap),HttpStatus.OK);
 	}
 }
 

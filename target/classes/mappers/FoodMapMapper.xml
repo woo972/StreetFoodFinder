@@ -13,9 +13,25 @@
 		   menu_info.menu_name,
 		   menu_info.menu_price,
 		   menu_info.unit 
-	from store_info 
-	left join menu_info
-	on store_info.store_id = menu_info.store_id	
+	from store_info left join menu_info	on store_info.store_id = menu_info.store_id	
+</select>
+
+<select id="showStoreInfo" parameterType="java.util.Map" resultType="java.util.Map">
+	select store_info.store_id,
+		   store_info.owner_id,
+		   store_info.store_name,
+		   store_info.store_desc, 
+		   store_info.store_lat, 
+		   store_info.store_lon,
+		   menu_info.menu_name,
+		   menu_info.menu_price,
+		   menu_info.unit,
+		   rating.rate,
+		   rating.comment,
+		   rating.writer_id
+	from store_info left join menu_info	on store_info.store_id = menu_info.store_id	
+					left join rating	on store_info.store_id = rating.store_id
+	where store_info.store_id = #{storeId}	
 </select>
  
 </mapper>

@@ -15,12 +15,12 @@ public class FoodMapService {
 	private FoodMapMapper foodMapMapper;
 	
 
-	public Map<String,String> showCoordinate(Map<String, String> foodMapMap) {
-		return null;
-	}
-
 	public List<Map<String,Object>> showStoreList(Map<String, String> foodMapMap) {
 		return foodMapMapper.showStoreList(foodMapMap);
+	}
+
+	public Map<String,Object> showStoreInfo(Map<String, String> foodMapMap) {
+		return foodMapMapper.showStoreInfo(foodMapMap);
 	}
 	
 	

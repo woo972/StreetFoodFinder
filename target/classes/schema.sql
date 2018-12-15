@@ -10,9 +10,10 @@
 drop table if exists user_info;
 create  table user_info (
 	user_id varchar(20) not null, 
-	user_pw varchar(20) not null, 
+	user_pw varchar(60) not null, 
 	user_name varchar(20),	
 	user_type varchar(3),
+	enabled varchar(1),
 	cre_date varchar(8),
 	upd_date varchar(8)
 );
@@ -21,7 +22,6 @@ alter table user_info add primary key (user_id);
 /*owner_id = user_id fk 처리?
  * 한 가게에 오너가 여러명인 경우, 오너 한 명이 여러 가게를 가진 경우....
  */
-
 drop table if exists store_info;
 create table store_info (
 	store_id varchar(20) not null, 
@@ -34,6 +34,7 @@ create table store_info (
 	upd_date varchar(8)	
 );
 alter table store_info add primary key (store_id);
+
 
 /* 타코야끼 8개에 천원 
  * 타코야끼 1팩에 천원...  각각 다른 단위가 있을 텐데 어떻게 정량화?
@@ -51,6 +52,17 @@ create table menu_info (
 	upd_date varchar(8)
 );
 alter table menu_info add primary key (store_id, menu_name);
+
+drop table if exists rating;
+create table rating (
+	store_id varchar(20) not null, 
+	rate integer,
+	writer_id varchar(20),
+	comment varchar(100),
+	cre_date varchar(8),
+	upd_date varchar(8)	
+);
+alter table rating add primary key (store_id);
 
 
 drop table if exists favorite;
@@ -76,24 +88,29 @@ alter table favorite add primary key (user_id,store_id);
 --); 
 --alter table notice add primary key (notice_id);
 
-drop table if exists board;
-create table board (
+drop table if exists community;
+create table community (
 	writer_id varchar(20) not null,
-	board_id varchar(20) not null,
+	post_id varchar(20) not null,
 	title varchar(20) not null,
 	content varchar(500),
+	view_cnt integer,
+	like_cnt integer,
+	unlike_cnt integer,
 	cre_date varchar(8),
 	upd_date varchar(8)
 	
 );
-alter table board add primary key (board_id);
+alter table community add primary key (post_id);
 
 drop table if exists reply;
 create table reply (
 	writer_id varchar(20) not null,
-	board_id varchar(20) not null,
+	post_id varchar(20) not null,
 	reply_id varchar(20) not null,
 	content varchar(500),
+	like_cnt integer,
+	unlike_cnt integer,	
 	cre_date varchar(8),
 	upd_date varchar(8)
 );

@@ -9,8 +9,8 @@
 </insert>
 
 <insert id="saveMenuInfo" parameterType="java.util.Map" >
-	insert into menu_info (store_id, menu_name, menu_price, unit)
-	values(#{storeId}, #{menuName}, #{menuPrice}, #{unit})
+	insert into menu_info (store_id, menu_name, menu_price)
+	values(#{storeId}, #{menuName}, #{menuPrice})
 </insert>
 
 <select id="showOwnStoreList" parameterType="java.util.Map" resultType="java.util.Map">

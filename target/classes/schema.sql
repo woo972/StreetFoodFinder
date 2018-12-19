@@ -43,11 +43,9 @@ alter table store_info add primary key (store_id);
 drop table if exists menu_info;
 create table menu_info (
 	store_id varchar(20) not null,
-	menu_type1 varchar(20),
-	menu_type2 varchar(20),
+	menu_type varchar(20),
 	menu_name varchar(20) not null,	
 	menu_price integer not null,
-	unit varchar(10) not null,
 	cre_date varchar(8),
 	upd_date varchar(8)
 );

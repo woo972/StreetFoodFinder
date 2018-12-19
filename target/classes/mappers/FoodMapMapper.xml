@@ -11,9 +11,15 @@
 		   store_info.store_lat, 
 		   store_info.store_lon,
 		   menu_info.menu_name,
-		   menu_info.menu_price,
-		   menu_info.unit 
+		   menu_info.menu_price
 	from store_info left join menu_info	on store_info.store_id = menu_info.store_id	
+	where 1=1
+		<if test="menus != null">
+			and 	
+			<foreach collection="menus" item="menu" open="(" close=")" separator="or">
+				menu_info.menu_name like '%'||#{menu}||'%'
+			</foreach>
+		</if>
 </select>
 
 <select id="showStoreInfo" parameterType="java.util.Map" resultType="java.util.Map">

@@ -14,7 +14,8 @@
 - Centos 자바 버전 관리(alternatives 사용)
 => https://blog.seotory.com/post/2016/08/java-setting-at-centos
 
-
+- 스웨거 설정
+=> https://www.vojtechruzicka.com/documenting-spring-boot-rest-api-swagger-springfox/
 
 
 

@@ -18,7 +18,7 @@
 </select>
 
 <select id="showOwnMenuList" parameterType="java.util.Map" resultType="java.util.Map">
-	select store_id, menu_name, menu_price, unit from menu_info where store_id = #{storeId}
+	select store_id, menu_name, menu_price from menu_info where store_id = #{storeId}
 </select>
 
 <update id="modifyStoreInfo" parameterType="java.util.Map" >
@@ -32,8 +32,8 @@
 </update>
 
 <update id="modifyMeunuInfo" parameterType="java.util.Map" >
-	insert into menu_info (store_id, menu_name, menu_price, unit)
-	values(#{store_id}, #{menu_name}, #{menu_price}, #{unit})
+	insert into menu_info (store_id, menu_name, menu_price)
+	values(#{store_id}, #{menu_name}, #{menu_price})
 </update>
 
 </mapper>

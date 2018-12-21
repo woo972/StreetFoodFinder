@@ -27,7 +27,9 @@ public class StoreManagementService {
 	}
 
 	public List<Map<String,Object>> showOwnMenuList(Map<String, String> storeManagementMap) {
-		return storeManagementMapper.showOwnMenuList(storeManagementMap);
+		List<Map<String,Object>> ownMenuList = storeManagementMapper.showOwnMenuList(storeManagementMap);
+		System.out.println(ownMenuList.get(0).get("MENU_NAME"));
+		return ownMenuList;
 	}
 
 	public void modifyStoreInfo(Map<String, String> storeMap) {

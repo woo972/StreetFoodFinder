@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wowls.sff.mapper.FoodMapMapper">
+ 
+<select id="showStoreList" parameterType="java.util.Map" resultType="java.util.Map">
+	select store_info.store_id,
+		   store_info.owner_id,
+		   store_info.store_name,
+		   store_info.store_desc, 
+		   store_info.store_lat, 
+		   store_info.store_lon,
+		   menu_info.menu_name,
+		   menu_info.menu_price
+	from store_info left join menu_info	on store_info.store_id = menu_info.store_id	
+	where 1=1
+		<if test="menus != null">
+			and 	
+			<foreach collection="menus" item="menu" open="(" close=")" separator="or">
+				menu_info.menu_name like '%'||#{menu}||'%'
+			</foreach>
+		</if>
+</select>
+
+<select id="showStoreInfo" parameterType="java.util.Map" resultType="java.util.Map">
+	select store_info.store_id,
+		   store_info.owner_id,
+		   store_info.store_name,
+		   store_info.store_desc, 
+		   store_info.store_lat, 
+		   store_info.store_lon,
+		   menu_info.menu_name,
+		   menu_info.menu_price,
+		   menu_info.unit,
+		   rating.rate,
+		   rating.comment,
+		   rating.writer_id
+	from store_info left join menu_info	on store_info.store_id = menu_info.store_id	
+					left join rating	on store_info.store_id = rating.store_id
+	where store_info.store_id = #{storeId}	
+</select>
+ 
+</mapper>

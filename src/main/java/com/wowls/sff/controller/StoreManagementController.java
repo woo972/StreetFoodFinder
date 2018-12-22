@@ -52,10 +52,8 @@ public class StoreManagementController {
 	
 	// 가게가 보유한 메뉴 가져오기
 	@GetMapping("/stores/{storeId}")
-	public ResponseEntity<List<Map<String,Object>>> showOwnMenuList(@PathVariable("ownerId") String ownerId,
-																    @PathVariable("storeId") String storeId) {
+	public ResponseEntity<List<Map<String,Object>>> showOwnMenuList(@PathVariable("storeId") String storeId) {
 		Map<String,String> storeManagementMap = new HashMap<String,String>();
-		storeManagementMap.put("ownerId", ownerId);
 		storeManagementMap.put("storeId", storeId);
 		return new ResponseEntity<>(storeManagementService.showOwnMenuList(storeManagementMap),HttpStatus.OK);
 	}

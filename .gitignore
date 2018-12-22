@@ -3,6 +3,8 @@
 #!target/WordChain-0.0.1-SNAPSHOT.jar
 #!.mvn/wrapper/maven-wrapper.jar
 
+.log
+.target
 ### STS ###
 .apt_generated
 .classpath

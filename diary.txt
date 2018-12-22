@@ -17,6 +17,8 @@
 - 스웨거 설정
 => https://www.vojtechruzicka.com/documenting-spring-boot-rest-api-swagger-springfox/
 
+- 마이바티스 설정
+=> http://tech.javacafe.io/2018/07/31/mybatis-with-spring/
 
 
 

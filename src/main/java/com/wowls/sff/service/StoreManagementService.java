@@ -15,6 +15,8 @@ public class StoreManagementService {
 	private StoreManagementMapper storeManagementMapper;
 
 	public void saveStoreInfo(Map<String, String> storeMap) {
+		String ownerId = storeMap.get("ownerId");
+		storeMap.put("storeId", ownerId+"_store");
 		storeManagementMapper.saveStoreInfo(storeMap);
 	}
 	

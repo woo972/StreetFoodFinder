@@ -10,4 +10,9 @@
         <mapper resource="mappers/StoreManagementMapper.xml"/>
         <mapper resource="mappers/FoodMapMapper.xml"/>
     </mappers>
+    
+    <settings>
+    	<setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+    
 </configuration>

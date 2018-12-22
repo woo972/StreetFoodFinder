@@ -7,6 +7,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -58,33 +59,41 @@ public class StoreManagementController {
 		return new ResponseEntity<>(storeManagementService.showOwnMenuList(storeManagementMap),HttpStatus.OK);
 	}
 	
-	// 가게 정보 / 메뉴 정보 수정 
+	// 가게 정보 수정 
 	@PutMapping("/stores/{storeId}")
 	public ResponseEntity<List<Map<String,Object>>> modifyStoreInfo(@PathVariable("storeId") String storeId,
 															 	    @RequestBody Map<String,String> storeMap) {
 		storeMap.put("storeId", storeId);
 		storeManagementService.modifyStoreInfo(storeMap);
-		storeManagementService.modifyMenuInfo(storeMap);
+		return new ResponseEntity<>(HttpStatus.CREATED);
+	}		
+	// 메뉴 정보 수정 
+	@PutMapping("/stores/{storeId}/menus/{menuName}")
+	public ResponseEntity<List<Map<String,Object>>> modifyMenuInfo(@PathVariable("storeId") String storeId,
+																   @PathVariable("menuName") String menuName,
+																   @RequestBody Map<String,String> menuMap) {
+		menuMap.put("storeId", storeId);
+		menuMap.put("menuName", menuName);
+		storeManagementService.modifyMenuInfo(menuMap);
 		return new ResponseEntity<>(HttpStatus.CREATED);
 	}		
 	
-//	// 가게 정보 삭제
-//	@DeleteMapping("/owners/{ownerId}/stores/{storeId}")
-//	public ResponseEntity<List<Map<String,Object>>> removeOwnStoreInfo(@PathVariable("ownerId") String ownerId,
-//																	   @PathVariable("storeId") String storeId) {
-//		Map<String,String> storeManagementMap = new HashMap<String,String>(); 
-//		storeManagementMap.put("ownerId", ownerId);
-//		storeManagementMap.put("storeId", storeId);
-//		return new ResponseEntity<>(storeManagementService.showOwnMenuList(storeManagementMap),HttpStatus.OK);
-//	}
-//	
-//	// 메뉴 정보 삭제 
-//	@DeleteMapping("/stores/{storeId}/menus/")
-//	public ResponseEntity<List<Map<String,Object>>> modifyStoreInfo(@PathVariable("storeId") String storeId,
-//																    @RequestBody Map<String,String> storeMap) {
-//		storeMap.put("storeId", storeId);
-//		storeManagementService.modifyStoreInfo(storeMap);
-//		storeManagementService.modifyMenuInfo(storeMap);
-//		return new ResponseEntity<>(HttpStatus.CREATED);
-//	}		
+	// 가게 정보 삭제
+	@DeleteMapping("/stores/{storeId}")
+	public ResponseEntity<List<Map<String,Object>>> removeOwnStoreInfo(@PathVariable("storeId") String storeId) {
+		Map<String,String> storeManagementMap = new HashMap<String,String>(); 
+		storeManagementMap.put("storeId", storeId);
+		return new ResponseEntity<>(storeManagementService.showOwnMenuList(storeManagementMap),HttpStatus.OK);
+	}
+	
+	// 메뉴 정보 삭제 
+	@DeleteMapping("/stores/{storeId}/menus/{menuName}")
+	public ResponseEntity<List<Map<String,Object>>> removeMenuInfo(@PathVariable("storeId") String storeId,
+																   @PathVariable("menuName") String menuName,
+																   @RequestBody Map<String,String> menuMap) {
+		menuMap.put("storeId", storeId);
+		menuMap.put("menuName", menuName);
+		storeManagementService.removeMenuInfo(menuMap);
+		return new ResponseEntity<>(HttpStatus.CREATED);
+	}		
 }

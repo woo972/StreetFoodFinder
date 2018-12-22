@@ -42,4 +42,8 @@ public class StoreManagementService {
 		storeManagementMapper.modifyMenuInfo(menuMap);
 	}
 
+	public void removeMenuInfo(Map<String, String> menuMap) {
+		storeManagementMapper.removeMenuInfo(menuMap);
+	}
+
 }

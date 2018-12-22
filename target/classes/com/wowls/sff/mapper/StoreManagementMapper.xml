@@ -28,12 +28,21 @@
 		    store_lat=#{storeLat}, 
 		    store_lon=#{storeLon}
 		where store_id=#{storeId}
-	
 </update>
 
 <update id="modifyMeunuInfo" parameterType="java.util.Map" >
 	insert into menu_info (store_id, menu_name, menu_price)
 	values(#{store_id}, #{menu_name}, #{menu_price})
 </update>
+
+<delete id="removeStoreInfo" parameterType="java.util.Map" >
+	delete from store_info 
+	where store_id=#{storeId}
+</delete>
+<delete id="removeMeunuInfo" parameterType="java.util.Map" >
+	delete from menu_info 
+	where store_id=#{storeId}
+	  and menu_name=#{menuName}
+</delete>
 
 </mapper>

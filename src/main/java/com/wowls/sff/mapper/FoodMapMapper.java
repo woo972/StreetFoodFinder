@@ -11,4 +11,8 @@ public interface FoodMapMapper {
 
 	Map<String, Object> showStoreInfo(Map<String, String> foodMapMap);
 
+	List<Map<String, Object>> showMenuList(Map<String, String> foodMapMap);
+
+	List<Map<String, Object>> showRatingList(Map<String, String> foodMapMap);
+
 }

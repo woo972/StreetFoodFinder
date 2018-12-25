@@ -12,11 +12,7 @@
 		   store_info.store_lon,
 		   store_info.enabled,
 		   store_info.cre_date,
-		   store_info.upd_date,
-		   menu_info.menu_name,
-		   menu_info.menu_price,
-		   menu_info.cre_date,
-		   menu_info.upd_date
+		   store_info.upd_date
 	from store_info left join menu_info	on store_info.store_id = menu_info.store_id	
 	where 1=1
 		<if test="menus != null">
@@ -42,17 +38,31 @@
 		   store_info.store_desc, 
 		   store_info.store_lat, 
 		   store_info.store_lon,
-		   menu_info.menu_name,
+		   store_info.enabled,
+		   store_info.cre_date,
+		   store_info.upd_date
+	from store_info 
+	where store_info.store_id = #{storeId}	
+</select>
+
+<select id="showMenuList" parameterType="java.util.Map" resultType="java.util.Map">
+	select menu_info.menu_name,
 		   menu_info.menu_price,
-		   avg(rating.rate) as rate_avg,
+		   menu_info.enabled,
+		   menu_info.cre_date,
+		   menu_info.upd_date
+	from menu_info 
+	where menu_info.store_id = #{storeId}	
+</select>
+
+<select id="showRatingList" parameterType="java.util.Map" resultType="java.util.Map">
+	select rating.writer_id,
 		   rating.rate,
 		   rating.comment,
-		   rating.writer_id,
 		   rating.cre_date,
 		   rating.upd_date
-	from store_info left join menu_info	on store_info.store_id = menu_info.store_id	
-					left join rating	on store_info.store_id = rating.store_id
-	where store_info.store_id = #{storeId}	
+	from rating 
+	where rating.store_id = #{storeId}	
 </select>
  
 </mapper>

@@ -14,6 +14,7 @@ values ('store3','pro2','store3','this is store3',37.498130,127.029110, 'Y', '20
 
 insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store1','붕어빵',1000, 'Y', '20181214','20181225');
 insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store1','붕어빵3',2000, 'Y','20181212','20181227');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store1','크림붕어빵',2000, 'Y','20181212','20181227');
 insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store2','땅콩과자',2000, 'Y', '20181214','20181225');
 insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store2','바나나빵',3000, 'N','20181212','20181227');
 insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store3','군고구마',5000, 'Y', '20181214','20181225');

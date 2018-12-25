@@ -3,6 +3,7 @@ package com.wowls.sff.service;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +17,9 @@ public class StoreManagementService {
 
 	public void saveStoreInfo(Map<String, String> storeMap) {
 		String ownerId = storeMap.get("ownerId");
-		storeMap.put("storeId", ownerId+"_store");
+		if(StringUtils.isEmpty(storeMap.get("storeId"))) {
+			storeMap.put("storeId", ownerId+"_store");
+		}
 		storeManagementMapper.saveStoreInfo(storeMap);
 	}
 	
@@ -30,7 +33,6 @@ public class StoreManagementService {
 
 	public List<Map<String,Object>> showOwnMenuList(Map<String, String> storeManagementMap) {
 		List<Map<String,Object>> ownMenuList = storeManagementMapper.showOwnMenuList(storeManagementMap);
-		System.out.println(ownMenuList.get(0).get("MENU_NAME"));
 		return ownMenuList;
 	}
 

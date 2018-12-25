@@ -16,8 +16,16 @@
 	where 1=1
 		<if test="menus != null">
 			and 	
-			<foreach collection="menus" item="menu" open="(" close=")" separator="or">
-				menu_info.menu_name like '%'||#{menu}||'%'
+			<foreach collection="keywords" item="keyword" open="(" close=")" separator="or">
+				menu_info.menu_name like '%'||#{keyword}||'%'
+			</foreach>
+			or
+			<foreach collection="keywords" item="keyword" open="(" close=")" separator="or">
+				store_info.store_name like '%'||#{keyword}||'%'
+			</foreach>
+			or
+			<foreach collection="keywords" item="keyword" open="(" close=")" separator="or">
+				store_info.store_desc like '%'||#{keyword}||'%'
 			</foreach>
 		</if>
 </select>

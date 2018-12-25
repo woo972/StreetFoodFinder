@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Implementation-Title: WordChain
 Implementation-Version: 1.0.0
-Built-By: dntnr
+Built-By: woo
 Implementation-Vendor-Id: com.wowls
-Build-Jdk: 1.8.0_181
+Build-Jdk: 1.8.0_181-1-ojdkbuild
 Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
  ot-starter-parent/sff
 Created-By: Maven Integration for Eclipse

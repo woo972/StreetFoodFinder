@@ -31,15 +31,14 @@ public class FoodMapController {
 			@RequestParam(value="lat",required=false) String lat,
 			@RequestParam(value="lon",required=false) String lon,
 			@RequestParam(value="measure",required=false) String measure,
-			@RequestParam(value="menus",required=false) String menus) {
+			@RequestParam(value="keywords",required=false) String keywords) {
 		
-		// null 을 넘기느냐... 아니면 공란을 넘기느냐? sql처리법 및 후속 로직이 달라짐
 		Map<String,Object> foodMapMap = new HashMap<String,Object>();
 		foodMapMap.put("lat",lat);
 		foodMapMap.put("lon",lon);
 		foodMapMap.put("measure",measure);
-		if(!StringUtils.isEmpty(menus)) {
-			foodMapMap.put("menus",Arrays.asList(menus.split(",")));
+		if(!StringUtils.isEmpty(keywords)) {
+			foodMapMap.put("keywords",Arrays.asList(keywords.split(",")));
 		}
 		
 		return new ResponseEntity<>(foodMapService.showStoreList(foodMapMap),HttpStatus.OK);

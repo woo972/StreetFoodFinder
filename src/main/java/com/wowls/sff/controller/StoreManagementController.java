@@ -34,7 +34,7 @@ public class StoreManagementController {
 		return new ResponseEntity<>(HttpStatus.CREATED);
 	}		
 	
-	// 특정 가게에 메뉴 등록 
+	// 메뉴 등록 
 	@PostMapping("/stores/{storeId}")
 	public ResponseEntity<List<Map<String,Object>>> saveMenuInfo(@PathVariable("storeId") String storeId,
 																 @RequestBody Map<String,String> menuMap) {
@@ -65,8 +65,9 @@ public class StoreManagementController {
 															 	    @RequestBody Map<String,String> storeMap) {
 		storeMap.put("storeId", storeId);
 		storeManagementService.modifyStoreInfo(storeMap);
-		return new ResponseEntity<>(HttpStatus.CREATED);
-	}		
+		return new ResponseEntity<>(HttpStatus.OK);
+	}
+	
 	// 메뉴 정보 수정 
 	@PutMapping("/stores/{storeId}/menus/{menuName}")
 	public ResponseEntity<List<Map<String,Object>>> modifyMenuInfo(@PathVariable("storeId") String storeId,
@@ -75,7 +76,7 @@ public class StoreManagementController {
 		menuMap.put("storeId", storeId);
 		menuMap.put("menuName", menuName);
 		storeManagementService.modifyMenuInfo(menuMap);
-		return new ResponseEntity<>(HttpStatus.CREATED);
+		return new ResponseEntity<>(HttpStatus.OK);
 	}		
 	
 	// 가게 정보 삭제
@@ -89,11 +90,11 @@ public class StoreManagementController {
 	// 메뉴 정보 삭제 
 	@DeleteMapping("/stores/{storeId}/menus/{menuName}")
 	public ResponseEntity<List<Map<String,Object>>> removeMenuInfo(@PathVariable("storeId") String storeId,
-																   @PathVariable("menuName") String menuName,
-																   @RequestBody Map<String,String> menuMap) {
+																   @PathVariable("menuName") String menuName) {
+		Map<String,String> menuMap = new HashMap<String,String>(); 
 		menuMap.put("storeId", storeId);
 		menuMap.put("menuName", menuName);
 		storeManagementService.removeMenuInfo(menuMap);
-		return new ResponseEntity<>(HttpStatus.CREATED);
+		return new ResponseEntity<>(HttpStatus.OK);
 	}		
 }

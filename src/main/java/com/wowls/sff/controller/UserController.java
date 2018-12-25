@@ -47,7 +47,8 @@ public class UserController {
 	// get all user list
 	@GetMapping
 	public ResponseEntity<List<Map<String,String>>> showUserList() {
-		return new ResponseEntity<>(userService.showUserList(),HttpStatus.OK);
+		List<Map<String,String>> userList = userService.showUserList();
+		return new ResponseEntity<>(userList,HttpStatus.OK);
 	}
 	
 	// get specific user info

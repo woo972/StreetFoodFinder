@@ -15,16 +15,19 @@ public class StoreManagementService {
 	@Autowired
 	private StoreManagementMapper storeManagementMapper;
 
-	public void saveStoreInfo(Map<String, String> storeMap) {
+	public int saveStoreInfo(Map<String, String> storeMap) {
 		String ownerId = storeMap.get("ownerId");
 		if(StringUtils.isEmpty(storeMap.get("storeId"))) {
 			storeMap.put("storeId", ownerId+"_store");
 		}
-		storeManagementMapper.saveStoreInfo(storeMap);
+		if(StringUtils.isEmpty(storeMap.get("storeName"))) {
+			storeMap.put("storeId", ownerId+"의 가게");
+		}
+		return storeManagementMapper.saveStoreInfo(storeMap);
 	}
 	
-	public void saveMenuInfo(Map<String, String> menuMap) {
-		storeManagementMapper.saveMenuInfo(menuMap);
+	public int saveMenuInfo(Map<String, String> menuMap) {
+		return storeManagementMapper.saveMenuInfo(menuMap);
 	}
 	
 	public List<Map<String,Object>> showOwnStoreList(Map<String, String> storeManagementMap) {		
@@ -36,16 +39,16 @@ public class StoreManagementService {
 		return ownMenuList;
 	}
 
-	public void modifyStoreInfo(Map<String, String> storeMap) {
-		storeManagementMapper.modifyStoreInfo(storeMap);
+	public int modifyStoreInfo(Map<String, String> storeMap) {
+		return storeManagementMapper.modifyStoreInfo(storeMap);
 	}
 
-	public void modifyMenuInfo(Map<String, String> menuMap) {
-		storeManagementMapper.modifyMenuInfo(menuMap);
+	public int modifyMenuInfo(Map<String, String> menuMap) {
+		return storeManagementMapper.modifyMenuInfo(menuMap);
 	}
 
-	public void removeMenuInfo(Map<String, String> menuMap) {
-		storeManagementMapper.removeMenuInfo(menuMap);
+	public int removeMenuInfo(Map<String, String> menuMap) {
+		return storeManagementMapper.removeMenuInfo(menuMap);
 	}
 
 }

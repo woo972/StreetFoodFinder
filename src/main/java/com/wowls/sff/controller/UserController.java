@@ -32,11 +32,6 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 	
-	@GetMapping("/hello")
-	public String hello() {
-		return "hello";
-	}
-
 	// sign up
 	@PostMapping
 	public ResponseEntity<Void> saveUserInfo(@RequestBody Map<String,String> userMap) {
@@ -65,7 +60,7 @@ public class UserController {
 											  ,@RequestBody Map<String,String> userMap ){
 		userMap.put("userId", userId);
 		userService.modifyUserInfo(userMap);
-		return new ResponseEntity<>(HttpStatus.CREATED);
+		return new ResponseEntity<>(HttpStatus.OK);
 	}
 	
 	// remove user

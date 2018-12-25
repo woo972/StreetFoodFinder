@@ -10,8 +10,13 @@
 		   store_info.store_desc, 
 		   store_info.store_lat, 
 		   store_info.store_lon,
+		   store_info.enabled,
+		   store_info.cre_date,
+		   store_info.upd_date,
 		   menu_info.menu_name,
-		   menu_info.menu_price
+		   menu_info.menu_price,
+		   menu_info.cre_date,
+		   menu_info.upd_date
 	from store_info left join menu_info	on store_info.store_id = menu_info.store_id	
 	where 1=1
 		<if test="menus != null">

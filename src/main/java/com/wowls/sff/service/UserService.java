@@ -3,6 +3,7 @@ package com.wowls.sff.service;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,8 +15,12 @@ public class UserService {
 	@Autowired
 	private UserMapper userMapper;
 	
-	public void saveUserInfo(Map<String,String> paramMap) {
-		userMapper.saveUserInfo(paramMap);
+	public int saveUserInfo(Map<String,String> paramMap) {
+		if(StringUtils.isEmpty(paramMap.get("userName"))) {
+			paramMap.put("userName", paramMap.get("userId"));
+		}
+		
+		return userMapper.saveUserInfo(paramMap);
 	}
 
 	public List<Map<String,String>> showUserList() {
@@ -26,11 +31,11 @@ public class UserService {
 		return userMapper.showUserInfo(paramMap);
 	}
 
-	public void modifyUserInfo(Map<String,String> paramMap) {
-		userMapper.modifyUserInfo(paramMap);
+	public int modifyUserInfo(Map<String,String> paramMap) {
+		return userMapper.modifyUserInfo(paramMap);
 	}
 
-	public void removeUser(Map<String,String> paramMap) {
-		userMapper.removeUser(paramMap);
+	public int removeUser(Map<String,String> paramMap) {
+		return userMapper.removeUser(paramMap);
 	}
 }

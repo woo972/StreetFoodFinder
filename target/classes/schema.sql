@@ -30,6 +30,7 @@ create table store_info (
 	store_desc varchar(100),
 	store_lat float,
 	store_lon float,
+	enabled varchar(1),
 	cre_date varchar(8),
 	upd_date varchar(8)	
 );
@@ -46,6 +47,7 @@ create table menu_info (
 	menu_type varchar(20),
 	menu_name varchar(20) not null,	
 	menu_price integer not null,
+	enabled varchar(1),
 	cre_date varchar(8),
 	upd_date varchar(8)
 );

@@ -4,21 +4,23 @@
 <mapper namespace="com.wowls.sff.mapper.StoreManagementMapper">
 
 <insert id="saveStoreInfo" parameterType="java.util.Map" >
-	insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon)
-	values(#{storeId}, #{ownerId}, #{storeName}, #{storeDesc}, #{storeLat}, #{storeLon})
+	insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date)
+	values(#{storeId}, #{ownerId}, #{storeName}, #{storeDesc}, #{storeLat}, #{storeLon}, 'Y', date_format(today(),'%Y%m%d'),date_format(today(),'%Y%m%d'))
 </insert>
 
 <insert id="saveMenuInfo" parameterType="java.util.Map" >
-	insert into menu_info (store_id, menu_name, menu_price)
-	values(#{storeId}, #{menuName}, #{menuPrice})
+	insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date)
+	values(#{storeId}, #{menuName}, #{menuPrice}, 'Y', date_format(today(),'%Y%m%d'),date_format(today(),'%Y%m%d'))
 </insert>
 
 <select id="showOwnStoreList" parameterType="java.util.Map" resultType="java.util.Map">
-	select store_id, owner_id, store_name, store_desc, store_lat, store_lon from store_info where owner_id = #{ownerId}
+	select store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date 
+	from store_info where owner_id = #{ownerId}
 </select>
 
 <select id="showOwnMenuList" parameterType="java.util.Map" resultType="java.util.Map">
-	select store_id, menu_name, menu_price from menu_info where store_id = #{storeId}
+	select store_id, menu_name, menu_price, enabled, cre_date, upd_date 
+	from menu_info where store_id = #{storeId}
 </select>
 
 <update id="modifyStoreInfo" parameterType="java.util.Map" >
@@ -26,23 +28,28 @@
 		set=store_name=#{storeName},
 		    store_desc=#{storeDesc},
 		    store_lat=#{storeLat}, 
-		    store_lon=#{storeLon}
+		    store_lon=#{storeLon},
+		    upd_time=date_format(today(),'%Y%m%d')
 		where store_id=#{storeId}
 </update>
 
 <update id="modifyMeunuInfo" parameterType="java.util.Map" >
-	insert into menu_info (store_id, menu_name, menu_price)
-	values(#{store_id}, #{menu_name}, #{menu_price})
+	update menu_info 
+		set=menu_name=#{menuName},
+			menu_price=#{menuPrice},
+		    upd_time=date_format(today(),'%Y%m%d')
+		where store_id=#{storeId}
 </update>
 
 <delete id="removeStoreInfo" parameterType="java.util.Map" >
 	delete from store_info 
-	where store_id=#{storeId}
+		where store_id=#{storeId}
 </delete>
+
 <delete id="removeMeunuInfo" parameterType="java.util.Map" >
 	delete from menu_info 
-	where store_id=#{storeId}
-	  and menu_name=#{menuName}
+		where store_id=#{storeId}
+	  	and menu_name=#{menuName}
 </delete>
 
 </mapper>

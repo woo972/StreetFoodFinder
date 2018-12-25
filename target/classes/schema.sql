@@ -56,13 +56,13 @@ alter table menu_info add primary key (store_id, menu_name);
 drop table if exists rating;
 create table rating (
 	store_id varchar(20) not null, 
+	writer_id varchar(20) not null,
 	rate integer,
-	writer_id varchar(20),
 	comment varchar(100),
 	cre_date varchar(8),
 	upd_date varchar(8)	
 );
-alter table rating add primary key (store_id);
+alter table rating add primary key (store_id,writer_id);
 
 
 drop table if exists favorite;

@@ -44,10 +44,12 @@
 		   store_info.store_lon,
 		   menu_info.menu_name,
 		   menu_info.menu_price,
-		   menu_info.unit,
+		   avg(rating.rate) as rate_avg,
 		   rating.rate,
 		   rating.comment,
-		   rating.writer_id
+		   rating.writer_id,
+		   rating.cre_date,
+		   rating.upd_date
 	from store_info left join menu_info	on store_info.store_id = menu_info.store_id	
 					left join rating	on store_info.store_id = rating.store_id
 	where store_info.store_id = #{storeId}	

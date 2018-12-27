@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.wowls.sff.service.StoreManagementService;
+import com.wowls.sff.service.UserService;
 
 @RestController
 @RequestMapping("/store-management*")
@@ -24,23 +25,43 @@ public class StoreManagementController {
 	
 	@Autowired
 	private StoreManagementService storeManagementService;
+	private UserService userService;
 	
 	// 가게 등록 
 	@PostMapping("/owners/{ownerId}")
 	public ResponseEntity<List<Map<String,Object>>> saveStoreInfo(@PathVariable("ownerId") String ownerId,
 																  @RequestBody Map<String,String> storeMap) {
-		storeMap.put("ownerId", ownerId);
-		storeManagementService.saveStoreInfo(storeMap);
-		return new ResponseEntity<>(HttpStatus.CREATED);
+		// 존재하는 유저만이 상점 개설 가능
+		storeMap.put("userId", ownerId);
+		if(!userService.showUserInfo(storeMap).isEmpty()) {
+			storeMap.put("ownerId", ownerId);
+			int rsltCode = storeManagementService.saveStoreInfo(storeMap);
+			if(rsltCode > 0) {
+				return new ResponseEntity<>(HttpStatus.CREATED);
+			}else {
+				return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+			}
+		}else {
+			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+		}
 	}		
 	
 	// 메뉴 등록 
 	@PostMapping("/stores/{storeId}")
 	public ResponseEntity<List<Map<String,Object>>> saveMenuInfo(@PathVariable("storeId") String storeId,
 																 @RequestBody Map<String,String> menuMap) {
+		// 존재하는 가게 일 때만 메뉴 등록 가능
 		menuMap.put("storeId", storeId);
-		storeManagementService.saveMenuInfo(menuMap);
-		return new ResponseEntity<>(HttpStatus.CREATED);
+		if(!storeManagementService.showOwnStoreList(menuMap).isEmpty()) {
+			int rsltCode = storeManagementService.saveMenuInfo(menuMap);
+			if(rsltCode > 0) {
+				return new ResponseEntity<>(HttpStatus.CREATED);
+			}else {
+				return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+			}
+		}else {
+			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+		}
 	}		
 	
 	// 점주가 보유한 가게 목록 가져오기
@@ -61,40 +82,57 @@ public class StoreManagementController {
 	
 	// 가게 정보 수정 
 	@PutMapping("/stores/{storeId}")
-	public ResponseEntity<List<Map<String,Object>>> modifyStoreInfo(@PathVariable("storeId") String storeId,
+	public ResponseEntity<Void> modifyStoreInfo(@PathVariable("storeId") String storeId,
 															 	    @RequestBody Map<String,String> storeMap) {
 		storeMap.put("storeId", storeId);
-		storeManagementService.modifyStoreInfo(storeMap);
-		return new ResponseEntity<>(HttpStatus.OK);
+		int rsltCode = storeManagementService.modifyStoreInfo(storeMap);
+		if(rsltCode > 0) {
+			return new ResponseEntity<>(HttpStatus.OK);
+		}else {
+			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+		}
 	}
 	
 	// 메뉴 정보 수정 
 	@PutMapping("/stores/{storeId}/menus/{menuName}")
-	public ResponseEntity<List<Map<String,Object>>> modifyMenuInfo(@PathVariable("storeId") String storeId,
+	public ResponseEntity<Void> modifyMenuInfo(@PathVariable("storeId") String storeId,
 																   @PathVariable("menuName") String menuName,
 																   @RequestBody Map<String,String> menuMap) {
 		menuMap.put("storeId", storeId);
 		menuMap.put("menuName", menuName);
-		storeManagementService.modifyMenuInfo(menuMap);
-		return new ResponseEntity<>(HttpStatus.OK);
+		int rsltCode = storeManagementService.modifyMenuInfo(menuMap);
+		if(rsltCode > 0) {
+			return new ResponseEntity<>(HttpStatus.OK);
+		}else {
+			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+		}
 	}		
 	
 	// 가게 정보 삭제
 	@DeleteMapping("/stores/{storeId}")
-	public ResponseEntity<List<Map<String,Object>>> removeOwnStoreInfo(@PathVariable("storeId") String storeId) {
+	public ResponseEntity<Void> removeOwnStoreInfo(@PathVariable("storeId") String storeId) {
 		Map<String,String> storeManagementMap = new HashMap<String,String>(); 
 		storeManagementMap.put("storeId", storeId);
-		return new ResponseEntity<>(storeManagementService.showOwnMenuList(storeManagementMap),HttpStatus.OK);
+		int rsltCode = storeManagementService.removeStoreInfo(storeManagementMap);
+		if(rsltCode > 0) {
+			return new ResponseEntity<>(HttpStatus.OK);
+		}else {
+			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+		}
 	}
 	
 	// 메뉴 정보 삭제 
 	@DeleteMapping("/stores/{storeId}/menus/{menuName}")
-	public ResponseEntity<List<Map<String,Object>>> removeMenuInfo(@PathVariable("storeId") String storeId,
+	public ResponseEntity<Void> removeMenuInfo(@PathVariable("storeId") String storeId,
 																   @PathVariable("menuName") String menuName) {
 		Map<String,String> menuMap = new HashMap<String,String>(); 
 		menuMap.put("storeId", storeId);
 		menuMap.put("menuName", menuName);
-		storeManagementService.removeMenuInfo(menuMap);
-		return new ResponseEntity<>(HttpStatus.OK);
+		int rsltCode = storeManagementService.removeMenuInfo(menuMap);
+		if(rsltCode > 0) {
+			return new ResponseEntity<>(HttpStatus.OK);
+		}else {
+			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+		}
 	}		
 }

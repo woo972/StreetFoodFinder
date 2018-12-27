@@ -35,8 +35,12 @@ public class UserController {
 	// sign up
 	@PostMapping
 	public ResponseEntity<Void> saveUserInfo(@RequestBody Map<String,String> userMap) {
-		userService.saveUserInfo(userMap);
-		return new ResponseEntity<>(HttpStatus.CREATED);
+		int rsltCode = userService.saveUserInfo(userMap);
+		if(rsltCode > 0) {
+			return new ResponseEntity<>(HttpStatus.CREATED);
+		}else {
+			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+		}
 	}
 	
 	// get all user list
@@ -59,8 +63,12 @@ public class UserController {
 	public ResponseEntity<Void> modifyUserInfo(@PathVariable("userId") String userId
 											  ,@RequestBody Map<String,String> userMap ){
 		userMap.put("userId", userId);
-		userService.modifyUserInfo(userMap);
-		return new ResponseEntity<>(HttpStatus.OK);
+		int rsltCode = userService.modifyUserInfo(userMap);
+		if(rsltCode > 0) {
+			return new ResponseEntity<>(HttpStatus.OK);
+		}else {
+			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+		}
 	}
 	
 	// remove user
@@ -68,8 +76,12 @@ public class UserController {
 	public ResponseEntity<Void> removeUser(@PathVariable("userId") String userId){
 		Map<String,String> userMap = new HashMap<>();
 		userMap.put("userId", userId);
-		userService.removeUser(userMap);
-		return new ResponseEntity<>(HttpStatus.OK);
+		int rsltCode = userService.removeUser(userMap);
+		if(rsltCode > 0) {
+			return new ResponseEntity<>(HttpStatus.OK);
+		}else {
+			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+		}
 	}
 	
 }

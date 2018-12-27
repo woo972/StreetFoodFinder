@@ -13,5 +13,6 @@ public interface StoreManagementMapper {
 	List<Map<String, Object>> showOwnMenuList(Map<String, String> storeManagementMap);
 	int modifyStoreInfo(Map<String, String> storeMap);
 	int modifyMenuInfo(Map<String, String> menuMap);
+	int removeStoreInfo(Map<String, String> menuMap);
 	int removeMenuInfo(Map<String, String> menuMap);
 }

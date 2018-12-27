@@ -47,6 +47,10 @@ public class StoreManagementService {
 		return storeManagementMapper.modifyMenuInfo(menuMap);
 	}
 
+	public int removeStoreInfo(Map<String, String> menuMap) {
+		return storeManagementMapper.removeStoreInfo(menuMap);
+	}
+	
 	public int removeMenuInfo(Map<String, String> menuMap) {
 		return storeManagementMapper.removeMenuInfo(menuMap);
 	}

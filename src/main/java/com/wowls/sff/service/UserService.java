@@ -20,7 +20,12 @@ public class UserService {
 			paramMap.put("userName", paramMap.get("userId"));
 		}
 		
-		return userMapper.saveUserInfo(paramMap);
+		if(showUserInfo(paramMap).isEmpty()) {
+			return userMapper.saveUserInfo(paramMap);
+		}else {
+			return 0;
+		}
+		
 	}
 
 	public List<Map<String,String>> showUserList() {

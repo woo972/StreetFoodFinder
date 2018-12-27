@@ -27,7 +27,7 @@ public class StoreManagementController {
 	private StoreManagementService storeManagementService;
 	private UserService userService;
 	
-	// 가게 등록 
+	// 가게 등록  
 	@PostMapping("/owners/{ownerId}")
 	public ResponseEntity<List<Map<String,Object>>> saveStoreInfo(@PathVariable("ownerId") String ownerId,
 																  @RequestBody Map<String,String> storeMap) {

@@ -4,8 +4,8 @@
 <mapper namespace="com.wowls.sff.mapper.UserMapper">
  
 <insert id="saveUserInfo" parameterType="java.util.Map">
-    insert into user_info (user_id, user_pw, user_name, user_type, enabled) 
-    			values(#{userId}, #{userPw}, #{userName}, #{userType}, 'Y', date_format(today(),'%Y%m%d'), date_format(today(),'%Y%m%d'))
+    insert into user_info (user_id, user_pw, user_name, user_type, enabled, cre_date, upd_date) 
+    			values(#{userId}, #{userPw}, #{userName}, #{userType}, 'Y', '20181227', '20181227')
 </insert>
  
 <select id="showUserList" resultType="java.util.Map">
@@ -17,7 +17,7 @@
 </select>
 
 <update id="modifyUserInfo" parameterType="java.util.Map">
-	update user_info set user_pw=#{userPw}, user_name=#{userName}, upd_date = date_format(today(),'%Y%m%d') where user_id = #{userId}
+	update user_info set user_pw=#{userPw}, user_name=#{userName}, upd_date = '20181227' where user_id = #{userId}
 </update>
 
 <delete id="removeUser" parameterType="java.util.Map">

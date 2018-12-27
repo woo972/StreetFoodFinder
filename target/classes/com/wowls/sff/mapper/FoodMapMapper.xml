@@ -15,7 +15,7 @@
 		   store_info.upd_date
 	from store_info left join menu_info	on store_info.store_id = menu_info.store_id	
 	where 1=1
-		<if test="menus != null">
+		<if test="keywords != null">
 			and 	
 			<foreach collection="keywords" item="keyword" open="(" close=")" separator="or">
 				menu_info.menu_name like '%'||#{keyword}||'%'

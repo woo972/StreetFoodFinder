@@ -5,12 +5,12 @@
 
 <insert id="saveStoreInfo" parameterType="java.util.Map" >
 	insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date)
-	values(#{storeId}, #{ownerId}, #{storeName}, #{storeDesc}, #{storeLat}, #{storeLon}, 'Y', date_format(today(),'%Y%m%d'),date_format(today(),'%Y%m%d'))
+	values(#{storeId}, #{ownerId}, #{storeName}, #{storeDesc}, #{storeLat}, #{storeLon}, 'Y', '20181227','20181227')
 </insert>
 
 <insert id="saveMenuInfo" parameterType="java.util.Map" >
 	insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date)
-	values(#{storeId}, #{menuName}, #{menuPrice}, 'Y', date_format(today(),'%Y%m%d'),date_format(today(),'%Y%m%d'))
+	values(#{storeId}, #{menuName}, #{menuPrice}, 'Y','20181227','20181227')
 </insert>
 
 <select id="showOwnStoreList" parameterType="java.util.Map" resultType="java.util.Map">
@@ -29,7 +29,7 @@
 		    store_desc=#{storeDesc},
 		    store_lat=#{storeLat}, 
 		    store_lon=#{storeLon},
-		    upd_time=date_format(today(),'%Y%m%d')
+		    upd_time='20181227'
 		where store_id=#{storeId}
 </update>
 
@@ -37,7 +37,7 @@
 	update menu_info 
 		set=menu_name=#{menuName},
 			menu_price=#{menuPrice},
-		    upd_time=date_format(today(),'%Y%m%d')
+		    upd_time='20181227'
 		where store_id=#{storeId}
 </update>
 

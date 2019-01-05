@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.wowls.sff.service.FoodMapService;
+import com.wowls.sff.service.FoodMapServiceImpl;
 
 
 @RestController
@@ -23,7 +23,7 @@ import com.wowls.sff.service.FoodMapService;
 public class FoodMapController {
 
 	@Autowired
-	private FoodMapService foodMapService;
+	private FoodMapServiceImpl foodMapService;
 	
 	// 가게 목록 불러오기
 	@GetMapping("/search")

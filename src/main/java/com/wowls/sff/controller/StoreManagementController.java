@@ -16,16 +16,16 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.wowls.sff.service.StoreManagementService;
-import com.wowls.sff.service.UserService;
+import com.wowls.sff.service.StoreManagementServiceImpl;
+import com.wowls.sff.service.UserServiceImpl;
 
 @RestController
 @RequestMapping("/store-management*")
 public class StoreManagementController {
 	
 	@Autowired
-	private StoreManagementService storeManagementService;
-	private UserService userService;
+	private StoreManagementServiceImpl storeManagementService;
+	private UserServiceImpl userService;
 	
 	// 가게 등록  
 	@PostMapping("/owners/{ownerId}")

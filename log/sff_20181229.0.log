@@ -1,0 +1,248 @@
+11:22:32.926 [restartedMain] INFO  c.w.sff.StreetFoodFinderApplication - Starting StreetFoodFinderApplication on DESKTOP-CQVQS73 with PID 3648 (C:\Users\dntnr\Desktop\Projects\eclipse_workspace\StreetFoodFinder\target\classes started by dntnr in C:\Users\dntnr\Desktop\Projects\eclipse_workspace\StreetFoodFinder)
+11:22:32.932 [restartedMain] DEBUG c.w.sff.StreetFoodFinderApplication - Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+11:22:32.934 [restartedMain] INFO  c.w.sff.StreetFoodFinderApplication - No active profile set, falling back to default profiles: default
+11:22:32.999 [restartedMain] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4a2f79a0: startup date [Sat Dec 29 11:22:32 KST 2018]; root of context hierarchy
+11:22:34.942 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$63cc02b8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+11:22:35.596 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 7701 (http)
+11:22:35.616 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-7701"]
+11:22:35.628 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+11:22:35.628 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+11:22:35.634 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_181\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_181/bin/server;C:/Program Files/Java/jre1.8.0_181/bin;C:/Program Files/Java/jre1.8.0_181/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Git\cmd;C:\nodejs\;C:\Users\dntnr\AppData\Local\Android\Sdkplatform-tools;C:\Users\dntnr\AppData\Local\Android\Sdktools;C:\WINDOWS\System32\OpenSSH\;C:\Users\dntnr\Desktop\apache-maven-3.5.4\bin;D:\Program Files\PuTTY\;C:\Users\dntnr\AppData\Local\Microsoft\WindowsApps;D:\Program Files\;C:\Users\dntnr\AppData\Roaming\npm;C:\Users\dntnr\AppData\Local\GitHubDesktop\bin;C:\Users\dntnr\Desktop;;.]
+11:22:35.829 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+11:22:35.829 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2830 ms
+11:22:36.072 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+11:22:36.074 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet webServlet mapped to [/h2-console/*]
+11:22:36.078 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+11:22:36.078 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+11:22:36.078 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+11:22:36.079 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+11:22:36.266 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+11:22:36.373 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+11:22:36.386 [restartedMain] INFO  o.s.jdbc.datasource.init.ScriptUtils - Executing SQL script from URL [file:/C:/Users/dntnr/Desktop/Projects/eclipse_workspace/StreetFoodFinder/target/classes/schema.sql]
+11:22:36.402 [restartedMain] INFO  o.s.jdbc.datasource.init.ScriptUtils - Executed SQL script from URL [file:/C:/Users/dntnr/Desktop/Projects/eclipse_workspace/StreetFoodFinder/target/classes/schema.sql] in 16 ms.
+11:22:36.409 [restartedMain] INFO  o.s.jdbc.datasource.init.ScriptUtils - Executing SQL script from URL [file:/C:/Users/dntnr/Desktop/Projects/eclipse_workspace/StreetFoodFinder/target/classes/data.sql]
+11:22:36.418 [restartedMain] INFO  o.s.jdbc.datasource.init.ScriptUtils - Executed SQL script from URL [file:/C:/Users/dntnr/Desktop/Projects/eclipse_workspace/StreetFoodFinder/target/classes/data.sql] in 9 ms.
+11:22:37.055 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/boards*],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.wowls.sff.controller.BoardController.savePost(java.util.Map<java.lang.String, java.lang.String>)
+11:22:37.057 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/favorite*/{storeId}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.wowls.sff.controller.FavoriteController.saveFavoriteStore(java.lang.String)
+11:22:37.058 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/stores*/{storeId}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> com.wowls.sff.controller.FoodMapController.showStoreInfo(java.lang.String)
+11:22:37.059 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/stores*/search],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<java.util.Map<java.lang.String, java.lang.Object>>> com.wowls.sff.controller.FoodMapController.showStoreList(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+11:22:37.061 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/store-management*/stores/{storeId}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.wowls.sff.controller.StoreManagementController.removeOwnStoreInfo(java.lang.String)
+11:22:37.062 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/store-management*/owners/{ownerId}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.util.List<java.util.Map<java.lang.String, java.lang.Object>>> com.wowls.sff.controller.StoreManagementController.saveStoreInfo(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+11:22:37.062 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/store-management*/stores/{storeId}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.wowls.sff.controller.StoreManagementController.modifyStoreInfo(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+11:22:37.062 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/store-management*/stores/{storeId}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<java.util.Map<java.lang.String, java.lang.Object>>> com.wowls.sff.controller.StoreManagementController.showOwnMenuList(java.lang.String)
+11:22:37.063 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/store-management*/stores/{storeId}/menus/{menuName}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.wowls.sff.controller.StoreManagementController.modifyMenuInfo(java.lang.String,java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+11:22:37.063 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/store-management*/stores/{storeId}/menus/{menuName}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.wowls.sff.controller.StoreManagementController.removeMenuInfo(java.lang.String,java.lang.String)
+11:22:37.064 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/store-management*/stores/{storeId}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.util.List<java.util.Map<java.lang.String, java.lang.Object>>> com.wowls.sff.controller.StoreManagementController.saveMenuInfo(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+11:22:37.064 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/store-management*/owners/{ownerId}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<java.util.Map<java.lang.String, java.lang.Object>>> com.wowls.sff.controller.StoreManagementController.showStoreList(java.lang.String)
+11:22:37.065 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/users*/{userId}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.wowls.sff.controller.UserController.modifyUserInfo(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+11:22:37.066 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/users*],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<java.util.Map<java.lang.String, java.lang.String>>> com.wowls.sff.controller.UserController.showUserList()
+11:22:37.066 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/users*/{userId}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.wowls.sff.controller.UserController.removeUser(java.lang.String)
+11:22:37.066 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/users*/{userId}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.String>> com.wowls.sff.controller.UserController.showUserInfo(java.lang.String)
+11:22:37.066 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/users*],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.wowls.sff.controller.UserController.saveUserInfo(java.util.Map<java.lang.String, java.lang.String>)
+11:22:37.069 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+11:22:37.070 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+11:22:37.071 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+11:22:37.074 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+11:22:37.074 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+11:22:37.239 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+11:22:37.405 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService  'clientInboundChannelExecutor'
+11:22:37.422 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService  'clientOutboundChannelExecutor'
+11:22:37.445 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService  'messageBrokerTaskScheduler'
+11:22:37.501 [restartedMain] INFO  o.s.w.s.s.s.WebSocketHandlerMapping - Mapped URL path [/ws/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+11:22:37.522 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService  'brokerChannelExecutor'
+11:22:37.743 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11:22:37.838 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4a2f79a0: startup date [Sat Dec 29 11:22:32 KST 2018]; root of context hierarchy
+11:22:37.904 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11:22:37.904 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11:22:37.975 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+11:22:38.312 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+11:22:38.343 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+11:22:38.344 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+11:22:38.351 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+11:22:38.356 [restartedMain] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+11:22:38.356 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+11:22:38.379 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+11:22:38.419 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+11:22:38.529 [restartedMain] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: showStoreListUsingGET_1
+11:22:38.546 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+11:22:38.546 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+11:22:38.547 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+11:22:38.554 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-7701"]
+11:22:38.562 [restartedMain] ERROR o.a.catalina.core.StandardService - Failed to start connector [Connector[HTTP/1.1-7701]]
+org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-7701]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:256)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:198)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:300)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.wowls.sff.StreetFoodFinderApplication.main(StreetFoodFinderApplication.java:11)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1020)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 18 common frames omitted
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1150)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:591)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1018)
+	... 19 common frames omitted
+11:22:38.565 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-7701"]
+11:22:38.566 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+11:22:38.574 [restartedMain] INFO  o.apache.catalina.util.LifecycleBase - The stop() method was called on component [StandardServer[-1]] after stop() had already been called. The second call will be ignored.
+11:22:38.574 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-7701"]
+11:22:38.574 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-7701"]
+11:22:38.577 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+11:22:38.583 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 7701 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 7701, or configure this application to listen on another port.
+
+11:22:38.585 [restartedMain] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4a2f79a0: startup date [Sat Dec 29 11:22:32 KST 2018]; root of context hierarchy
+11:22:38.587 [restartedMain] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+11:22:38.588 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+11:22:38.588 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+11:22:38.588 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+11:22:38.591 [restartedMain] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-197]
+11:22:38.591 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+11:22:38.592 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+11:22:38.592 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'brokerChannelExecutor'
+11:22:38.592 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'messageBrokerTaskScheduler'
+11:22:38.592 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientOutboundChannelExecutor'
+11:22:38.593 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientInboundChannelExecutor'
+11:22:38.593 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+11:22:38.596 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+11:23:19.559 [restartedMain] INFO  c.w.sff.StreetFoodFinderApplication - Starting StreetFoodFinderApplication on DESKTOP-CQVQS73 with PID 8208 (C:\Users\dntnr\Desktop\Projects\eclipse_workspace\StreetFoodFinder\target\classes started by dntnr in C:\Users\dntnr\Desktop\Projects\eclipse_workspace\StreetFoodFinder)
+11:23:19.561 [restartedMain] DEBUG c.w.sff.StreetFoodFinderApplication - Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+11:23:19.562 [restartedMain] INFO  c.w.sff.StreetFoodFinderApplication - No active profile set, falling back to default profiles: default
+11:23:19.600 [restartedMain] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@31d34ffc: startup date [Sat Dec 29 11:23:19 KST 2018]; root of context hierarchy
+11:23:20.963 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$bf9aac14] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+11:23:21.356 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 7701 (http)
+11:23:21.366 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-7701"]
+11:23:21.374 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+11:23:21.374 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+11:23:21.378 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_181\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_181/bin/server;C:/Program Files/Java/jre1.8.0_181/bin;C:/Program Files/Java/jre1.8.0_181/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Git\cmd;C:\nodejs\;C:\Users\dntnr\AppData\Local\Android\Sdkplatform-tools;C:\Users\dntnr\AppData\Local\Android\Sdktools;C:\WINDOWS\System32\OpenSSH\;C:\Users\dntnr\Desktop\apache-maven-3.5.4\bin;D:\Program Files\PuTTY\;C:\Users\dntnr\AppData\Local\Microsoft\WindowsApps;D:\Program Files\;C:\Users\dntnr\AppData\Roaming\npm;C:\Users\dntnr\AppData\Local\GitHubDesktop\bin;C:\Users\dntnr\Desktop;;.]
+11:23:21.513 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+11:23:21.513 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1913 ms
+11:23:21.677 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+11:23:21.678 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet webServlet mapped to [/h2-console/*]
+11:23:21.681 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+11:23:21.681 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+11:23:21.681 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+11:23:21.681 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+11:23:21.799 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+11:23:21.866 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+11:23:21.877 [restartedMain] INFO  o.s.jdbc.datasource.init.ScriptUtils - Executing SQL script from URL [file:/C:/Users/dntnr/Desktop/Projects/eclipse_workspace/StreetFoodFinder/target/classes/schema.sql]
+11:23:21.891 [restartedMain] INFO  o.s.jdbc.datasource.init.ScriptUtils - Executed SQL script from URL [file:/C:/Users/dntnr/Desktop/Projects/eclipse_workspace/StreetFoodFinder/target/classes/schema.sql] in 14 ms.
+11:23:21.896 [restartedMain] INFO  o.s.jdbc.datasource.init.ScriptUtils - Executing SQL script from URL [file:/C:/Users/dntnr/Desktop/Projects/eclipse_workspace/StreetFoodFinder/target/classes/data.sql]
+11:23:21.905 [restartedMain] INFO  o.s.jdbc.datasource.init.ScriptUtils - Executed SQL script from URL [file:/C:/Users/dntnr/Desktop/Projects/eclipse_workspace/StreetFoodFinder/target/classes/data.sql] in 9 ms.
+11:23:22.450 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/boards*],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.wowls.sff.controller.BoardController.savePost(java.util.Map<java.lang.String, java.lang.String>)
+11:23:22.451 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/favorite*/{storeId}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.wowls.sff.controller.FavoriteController.saveFavoriteStore(java.lang.String)
+11:23:22.452 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/stores*/search],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<java.util.Map<java.lang.String, java.lang.Object>>> com.wowls.sff.controller.FoodMapController.showStoreList(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+11:23:22.453 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/stores*/{storeId}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> com.wowls.sff.controller.FoodMapController.showStoreInfo(java.lang.String)
+11:23:22.456 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/store-management*/stores/{storeId}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.wowls.sff.controller.StoreManagementController.removeOwnStoreInfo(java.lang.String)
+11:23:22.456 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/store-management*/stores/{storeId}/menus/{menuName}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.wowls.sff.controller.StoreManagementController.removeMenuInfo(java.lang.String,java.lang.String)
+11:23:22.457 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/store-management*/owners/{ownerId}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.util.List<java.util.Map<java.lang.String, java.lang.Object>>> com.wowls.sff.controller.StoreManagementController.saveStoreInfo(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+11:23:22.457 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/store-management*/owners/{ownerId}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<java.util.Map<java.lang.String, java.lang.Object>>> com.wowls.sff.controller.StoreManagementController.showStoreList(java.lang.String)
+11:23:22.458 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/store-management*/stores/{storeId}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.wowls.sff.controller.StoreManagementController.modifyStoreInfo(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+11:23:22.458 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/store-management*/stores/{storeId}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.util.List<java.util.Map<java.lang.String, java.lang.Object>>> com.wowls.sff.controller.StoreManagementController.saveMenuInfo(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+11:23:22.459 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/store-management*/stores/{storeId}/menus/{menuName}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.wowls.sff.controller.StoreManagementController.modifyMenuInfo(java.lang.String,java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+11:23:22.459 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/store-management*/stores/{storeId}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<java.util.Map<java.lang.String, java.lang.Object>>> com.wowls.sff.controller.StoreManagementController.showOwnMenuList(java.lang.String)
+11:23:22.460 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/users*],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<java.util.Map<java.lang.String, java.lang.String>>> com.wowls.sff.controller.UserController.showUserList()
+11:23:22.461 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/users*/{userId}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.wowls.sff.controller.UserController.modifyUserInfo(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+11:23:22.461 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/users*],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.wowls.sff.controller.UserController.saveUserInfo(java.util.Map<java.lang.String, java.lang.String>)
+11:23:22.461 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/users*/{userId}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.wowls.sff.controller.UserController.removeUser(java.lang.String)
+11:23:22.462 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/users*/{userId}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.String>> com.wowls.sff.controller.UserController.showUserInfo(java.lang.String)
+11:23:22.464 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+11:23:22.465 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+11:23:22.466 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+11:23:22.468 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+11:23:22.468 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+11:23:22.605 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+11:23:22.720 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService  'clientInboundChannelExecutor'
+11:23:22.732 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService  'clientOutboundChannelExecutor'
+11:23:22.748 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService  'messageBrokerTaskScheduler'
+11:23:22.782 [restartedMain] INFO  o.s.w.s.s.s.WebSocketHandlerMapping - Mapped URL path [/ws/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+11:23:22.795 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService  'brokerChannelExecutor'
+11:23:22.943 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11:23:23.014 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@31d34ffc: startup date [Sat Dec 29 11:23:19 KST 2018]; root of context hierarchy
+11:23:23.056 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11:23:23.056 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11:23:23.092 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+11:23:23.326 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+11:23:23.350 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+11:23:23.352 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+11:23:23.357 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+11:23:23.360 [restartedMain] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+11:23:23.361 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+11:23:23.374 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+11:23:23.410 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+11:23:23.500 [restartedMain] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: showStoreListUsingGET_1
+11:23:23.515 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+11:23:23.515 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+11:23:23.516 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+11:23:23.523 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-7701"]
+11:23:23.538 [restartedMain] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+11:23:23.554 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 7701 (http) with context path ''
+11:23:23.559 [restartedMain] INFO  c.w.sff.StreetFoodFinderApplication - Started StreetFoodFinderApplication in 4.215 seconds (JVM running for 5.274)
+11:23:26.489 [http-nio-7701-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+11:23:26.490 [http-nio-7701-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+11:23:26.515 [http-nio-7701-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms
+11:23:43.073 [http-nio-7701-exec-4] INFO  com.wowls.sff.LogAspect - ### method : FoodMapController.showStoreInfo(..) / args : [store1]
+11:23:43.094 [http-nio-7701-exec-4] DEBUG c.w.s.m.FoodMapMapper.showStoreInfo - ==>  Preparing: select store_info.store_id, store_info.owner_id, store_info.store_name, store_info.store_desc, store_info.store_lat, store_info.store_lon, store_info.enabled, store_info.cre_date, store_info.upd_date from store_info where store_info.store_id = ? 
+11:23:43.112 [http-nio-7701-exec-4] DEBUG c.w.s.m.FoodMapMapper.showStoreInfo - ==> Parameters: store1(String)
+11:23:43.131 [http-nio-7701-exec-4] DEBUG c.w.s.m.FoodMapMapper.showStoreInfo - <==      Total: 1
+11:23:43.132 [http-nio-7701-exec-4] DEBUG c.w.s.m.FoodMapMapper.showMenuList - ==>  Preparing: select menu_info.menu_name, menu_info.menu_price, menu_info.enabled, menu_info.cre_date, menu_info.upd_date from menu_info where menu_info.store_id = ? 
+11:23:43.132 [http-nio-7701-exec-4] DEBUG c.w.s.m.FoodMapMapper.showMenuList - ==> Parameters: store1(String)
+11:23:43.133 [http-nio-7701-exec-4] DEBUG c.w.s.m.FoodMapMapper.showMenuList - <==      Total: 3
+11:23:43.133 [http-nio-7701-exec-4] DEBUG c.w.s.m.FoodMapMapper.showRatingList - ==>  Preparing: select rating.writer_id, rating.rate, rating.comment, rating.cre_date, rating.upd_date from rating where rating.store_id = ? 
+11:23:43.133 [http-nio-7701-exec-4] DEBUG c.w.s.m.FoodMapMapper.showRatingList - ==> Parameters: store1(String)
+11:23:43.134 [http-nio-7701-exec-4] DEBUG c.w.s.m.FoodMapMapper.showRatingList - <==      Total: 2
+11:23:58.272 [http-nio-7701-exec-8] INFO  com.wowls.sff.LogAspect - ### method : FoodMapController.showStoreList(..) / args : [null, null, null, null]
+11:23:58.290 [http-nio-7701-exec-8] DEBUG c.w.s.m.FoodMapMapper.showStoreList - ==>  Preparing: select store_info.store_id, store_info.owner_id, store_info.store_name, store_info.store_desc, store_info.store_lat, store_info.store_lon, store_info.enabled, store_info.cre_date, store_info.upd_date from store_info left join menu_info on store_info.store_id = menu_info.store_id where 1=1 
+11:23:58.291 [http-nio-7701-exec-8] DEBUG c.w.s.m.FoodMapMapper.showStoreList - ==> Parameters: 
+11:23:58.293 [http-nio-7701-exec-8] DEBUG c.w.s.m.FoodMapMapper.showStoreList - <==      Total: 6
+11:24:22.795 [MessageBroker-1] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannelpool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+11:34:47.874 [http-nio-7701-exec-1] INFO  com.wowls.sff.LogAspect - ### method : FoodMapController.showStoreInfo(..) / args : [store1]
+11:34:47.875 [http-nio-7701-exec-1] DEBUG c.w.s.m.FoodMapMapper.showStoreInfo - ==>  Preparing: select store_info.store_id, store_info.owner_id, store_info.store_name, store_info.store_desc, store_info.store_lat, store_info.store_lon, store_info.enabled, store_info.cre_date, store_info.upd_date from store_info where store_info.store_id = ? 
+11:34:47.876 [http-nio-7701-exec-1] DEBUG c.w.s.m.FoodMapMapper.showStoreInfo - ==> Parameters: store1(String)
+11:34:47.877 [http-nio-7701-exec-1] DEBUG c.w.s.m.FoodMapMapper.showStoreInfo - <==      Total: 1
+11:34:47.877 [http-nio-7701-exec-1] DEBUG c.w.s.m.FoodMapMapper.showMenuList - ==>  Preparing: select menu_info.menu_name, menu_info.menu_price, menu_info.enabled, menu_info.cre_date, menu_info.upd_date from menu_info where menu_info.store_id = ? 
+11:34:47.878 [http-nio-7701-exec-1] DEBUG c.w.s.m.FoodMapMapper.showMenuList - ==> Parameters: store1(String)
+11:34:47.879 [http-nio-7701-exec-1] DEBUG c.w.s.m.FoodMapMapper.showMenuList - <==      Total: 3
+11:34:47.879 [http-nio-7701-exec-1] DEBUG c.w.s.m.FoodMapMapper.showRatingList - ==>  Preparing: select rating.writer_id, rating.rate, rating.comment, rating.cre_date, rating.upd_date from rating where rating.store_id = ? 
+11:34:47.879 [http-nio-7701-exec-1] DEBUG c.w.s.m.FoodMapMapper.showRatingList - ==> Parameters: store1(String)
+11:34:47.879 [http-nio-7701-exec-1] DEBUG c.w.s.m.FoodMapMapper.showRatingList - <==      Total: 2
+11:54:22.794 [MessageBroker-1] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannelpool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 2, active threads = 1, queued tasks = 0, completed tasks = 1]
+12:24:22.795 [MessageBroker-2] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannelpool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 3, active threads = 1, queued tasks = 0, completed tasks = 2]
+12:54:22.794 [MessageBroker-1] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannelpool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 0, completed tasks = 3]
+13:24:22.794 [MessageBroker-1] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannelpool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 0, completed tasks = 4]
+13:54:22.794 [MessageBroker-1] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannelpool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 0, completed tasks = 5]

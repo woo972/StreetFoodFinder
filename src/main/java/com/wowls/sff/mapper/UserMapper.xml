@@ -7,6 +7,10 @@
     insert into user_info (user_id, user_pw, user_name, user_type, enabled, cre_date, upd_date) 
     			values(#{userId}, #{userPw}, #{userName}, #{userType}, 'Y', '20181227', '20181227')
 </insert>
+
+<select id="showNonce" parameterType="java.util.Map" resultType="String">
+	select nonce from temp_nonce
+</select>
  
 <select id="showUserList" resultType="java.util.Map">
 	select user_id, user_pw, user_name, user_type, enabled, cre_date, upd_date user_type from user_info
@@ -20,8 +24,16 @@
 	update user_info set user_pw=#{userPw}, user_name=#{userName}, upd_date = '20181227' where user_id = #{userId}
 </update>
 
+<select id="activateAccount" parameterType="java.util.Map">
+	update user_info set enabled='Y' where user_id = #{userId}
+</select>
+
 <delete id="removeUser" parameterType="java.util.Map">
 	delete from user_info where user_id = #{userId}
 </delete>  
- 
+
+<select id="removeNonce" parameterType="java.util.Map">
+	delete from temp_nonce where user_id = #{userId}
+</select>
+
 </mapper>

@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class FavoriteController {
 
 //	@Autowired
-//	private FoodMapService foodMapService;
+//	private FoodMapServiceImpl foodMapService;
 	
 	@PostMapping("/{storeId}")
 	public ResponseEntity<Void> saveFavoriteStore(@PathVariable("storeId") String storeId){

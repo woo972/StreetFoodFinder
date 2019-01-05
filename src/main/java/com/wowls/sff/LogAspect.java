@@ -23,7 +23,8 @@ public class LogAspect {
 //	private SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 	
 	
-	// 컨트롤러가 정의한 모든 메서드
+	// public com.wowls.sff.controller.UserController.getUserList(Map<String,String> userMap) 형식
+	// ..은 해당 경로 이하 모두 or 임의의 파라미터 개수를 의미함 
 	@Before("execution(* com.wowls.sff.controller..*(..))")
 	public void berforeLog(JoinPoint joinPoint) {
 		logger.info("### method : {} / args : {}", 

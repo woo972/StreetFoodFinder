@@ -4,13 +4,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.wowls.sff.service.PaymentService;
+import com.wowls.sff.service.PaymentServiceImpl;
 
 @RestController
 @RequestMapping("/payment*")
 public class PaymentController {
 
 	@Autowired
-	private PaymentService paymentService;
+	private PaymentServiceImpl paymentService;
 	
 }

@@ -16,7 +16,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.wowls.sff.service.UserService;
+import com.wowls.sff.service.MailServiceImpl;
+import com.wowls.sff.service.UserServiceImpl;
 
 /* 필요 메서드 
  * 1. admin 용
@@ -30,14 +31,35 @@ import com.wowls.sff.service.UserService;
 public class UserController {
 
 	@Autowired
-	private UserService userService;
+	private UserServiceImpl userService;
+	@Autowired
+	private MailServiceImpl mailService;
+	
+	
+	//test
+	@GetMapping("/test")
+	public void test() {
+		try{
+		mailService.sendSimpleMessage("dntnrmsss@naver.com","test","asdf","dntnrmsss@gmail.com");
+		}catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
 	
 	// sign up
 	@PostMapping
-	public ResponseEntity<Void> saveUserInfo(@RequestBody Map<String,String> userMap) {
-		int rsltCode = userService.saveUserInfo(userMap);
-		if(rsltCode > 0) {
-			return new ResponseEntity<>(HttpStatus.CREATED);
+	public ResponseEntity<Map<String,String>> saveUserInfo(@RequestBody Map<String,String> userMap) {
+		return new ResponseEntity<Map<String,String>>(userService.saveUserInfo(userMap), HttpStatus.CREATED);
+	}
+	
+	// activate account
+	@PutMapping("/activate/{userId}")	
+	public ResponseEntity<Void> activateAccount(@PathVariable("userId") String userId
+												,@RequestBody Map<String,String> userMap) {
+		// check nonce 
+		userMap.put("userId", userId);
+		if(userService.activateAccount(userMap)) {
+			return new ResponseEntity<>(HttpStatus.OK);
 		}else {
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 		}

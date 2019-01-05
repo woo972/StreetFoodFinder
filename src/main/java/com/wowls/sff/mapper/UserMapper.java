@@ -17,4 +17,10 @@ public interface UserMapper {
 	int modifyUserInfo(Map<String,String> paramMap);
 
 	int removeUser(Map<String,String> paramMap);
+
+	String showNonce(Map<String, String> userMap);
+
+	void removeNonce(Map<String, String> userMap);
+
+	void activateAccount(Map<String, String> userMap);
 }

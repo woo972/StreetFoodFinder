@@ -20,7 +20,14 @@
 - 마이바티스 설정
 => http://tech.javacafe.io/2018/07/31/mybatis-with-spring/
 
+- 메일 인증 구현
+=> https://www.baeldung.com/spring-email
+=> https://memorynotfound.com/spring-mail-sending-simplemailmessage-javamailsender-example/
+=> http://www.kaushikbaruah.com/posts/email-service-with-spring-boot/
 
+
+- application.properties 암호화
+=> https://www.baeldung.com/spring-boot-jasypt
 
 ======================== wordchain ================================
 - Cannot load JDBC driver class 'com.mysql.jdbc.Driver'

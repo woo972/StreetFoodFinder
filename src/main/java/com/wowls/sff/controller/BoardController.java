@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class BoardController {
 
 //	@Autowired
-//	private FoodMapService foodMapService;
+//	private FoodMapServiceImpl foodMapService;
 	
 	@PostMapping
 	public ResponseEntity<Void> savePost(@RequestBody Map<String, String> boardsMap){

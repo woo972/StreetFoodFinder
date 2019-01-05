@@ -9,15 +9,25 @@
 
 drop table if exists user_info;
 create  table user_info (
-	user_id varchar(20) not null, 
+	user_id varchar(100) not null, 
 	user_pw varchar(60) not null, 
-	user_name varchar(20),	
+	user_name varchar(50),	
 	user_type varchar(3),
+	gender varchar(1),
+	birthday varchar(8),
 	enabled varchar(1),
 	cre_date varchar(8),
 	upd_date varchar(8)
 );
 alter table user_info add primary key (user_id);
+
+drop table if exists temp_nonce;
+create  table temp_nonce (
+	user_id varchar(100) not null,
+	nonce varchar(10) not null,
+	cre_date varchar(8)
+);
+alter table temp_nonce add primary key (user_id, nonce);
 
 /*owner_id = user_id fk 처리?
  * 한 가게에 오너가 여러명인 경우, 오너 한 명이 여러 가게를 가진 경우....

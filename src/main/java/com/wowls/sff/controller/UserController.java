@@ -7,6 +7,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.mail.MailException;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -38,24 +39,30 @@ public class UserController {
 	
 	//test
 	@GetMapping("/test")
-	public void test() {
+	public String test() {
 		try{
-		mailService.sendSimpleMessage("dntnrmsss@naver.com","test","asdf","dntnrmsss@gmail.com");
-		}catch(Exception e) {
+			mailService.sendSimpleMessage("dntnrmsss@naver.com","test","asdf","dntnrmsss@gmail.com");
+		}catch(MailException e) {
 			System.out.println(e.getMessage());
 		}
+		return "test complete";
 	}
 	
 	// sign up
 	@PostMapping
 	public ResponseEntity<Map<String,String>> saveUserInfo(@RequestBody Map<String,String> userMap) {
-		return new ResponseEntity<Map<String,String>>(userService.saveUserInfo(userMap), HttpStatus.CREATED);
+		Map<String,String> nonceMap = userService.saveUserInfo(userMap);
+		if(nonceMap != null) {
+			return new ResponseEntity<Map<String,String>>(nonceMap, HttpStatus.CREATED);
+		}
+		
+		return new ResponseEntity<Map<String,String>>(nonceMap, HttpStatus.BAD_REQUEST);
 	}
 	
 	// activate account
 	@PutMapping("/activate/{userId}")	
 	public ResponseEntity<Void> activateAccount(@PathVariable("userId") String userId
-												,@RequestBody Map<String,String> userMap) {
+											   ,@RequestBody Map<String,String> userMap) {
 		// check nonce 
 		userMap.put("userId", userId);
 		if(userService.activateAccount(userMap)) {

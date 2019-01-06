@@ -10,6 +10,10 @@ public interface UserMapper {
 
 	int saveUserInfo(Map<String,String> paramMap);
 
+	void saveNonce(Map<String, String> paramMap);
+
+	void activateAccount(Map<String, String> userMap);
+
 	List<Map<String,String>> showUserList();
 
 	Map<String,String> showUserInfo(Map<String,String> paramMap);
@@ -22,5 +26,5 @@ public interface UserMapper {
 
 	void removeNonce(Map<String, String> userMap);
 
-	void activateAccount(Map<String, String> userMap);
+
 }

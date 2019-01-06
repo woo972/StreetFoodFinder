@@ -8,6 +8,10 @@
     			values(#{userId}, #{userPw}, #{userName}, #{userType}, 'Y', '20181227', '20181227')
 </insert>
 
+<insert id="saveNonce" parameterType="java.util.Map">
+    insert into temp_nonce (user_id, nonce, cre_date) values (#{userId}, #{nonce}, '20190106')
+</insert>
+
 <select id="showNonce" parameterType="java.util.Map" resultType="String">
 	select nonce from temp_nonce
 </select>

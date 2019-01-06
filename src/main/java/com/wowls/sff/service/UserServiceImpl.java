@@ -17,6 +17,7 @@ public class UserServiceImpl {
 	
 	@Autowired
 	private UserMapper userMapper;
+	@Autowired
 	private MailServiceImpl mailService;
 	
 	public Map<String,String> saveUserInfo(Map<String,String> paramMap) {
@@ -24,17 +25,22 @@ public class UserServiceImpl {
 			paramMap.put("userName", paramMap.get("userId"));
 		}
 		
+		// 회원가입 양식 확인
 		if(checkSignUpForm(paramMap)) {
 			
-			// 이메일 인증 전 회원 비활성화
+			// 이메일 인증 절차
+			if(!userMapper.showNonce(paramMap).isEmpty()){
+				userMapper.removeNonce(paramMap);
+			}
 			String nonce="";
 			for(int i=0; i<6; i++) {
 				nonce += String.valueOf((int)Math.random()*10);
 			}
 			paramMap.put("nonce", nonce);
-			paramMap.put("enabled", "N");
+			userMapper.saveNonce(paramMap);
 //			mailService.sendSimpleMessage("");
 			
+			paramMap.put("enabled", "N");
 			userMapper.saveUserInfo(paramMap);
 			
 			Map<String,String> nonceMap = new HashMap<String,String>();
@@ -43,13 +49,12 @@ public class UserServiceImpl {
 		}else {
 			return null;
 		}
-		
 	}
 	
 	public boolean activateAccount(Map<String, String> userMap) {
 		if(userMap.get("nonce").equals(userMapper.showNonce(userMap))){
-			userMapper.removeNonce(userMap);
 			userMapper.activateAccount(userMap);
+			userMapper.removeNonce(userMap);
 			return true;
 		}else {
 			return false;

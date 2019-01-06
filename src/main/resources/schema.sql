@@ -21,6 +21,9 @@ create  table user_info (
 );
 alter table user_info add primary key (user_id);
 
+/*cre_date가 n일 이상이면 삭제 
+ * 
+ * */
 drop table if exists temp_nonce;
 create  table temp_nonce (
 	user_id varchar(100) not null,

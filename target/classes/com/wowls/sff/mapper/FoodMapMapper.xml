@@ -4,7 +4,8 @@
 <mapper namespace="com.wowls.sff.mapper.FoodMapMapper">
  
 <select id="showStoreList" parameterType="java.util.Map" resultType="java.util.Map">
-	select store_info.store_id,
+	select distinct
+		   store_info.store_id,
 		   store_info.owner_id,
 		   store_info.store_name,
 		   store_info.store_desc, 
@@ -14,7 +15,7 @@
 		   store_info.cre_date,
 		   store_info.upd_date
 	from store_info left join menu_info	on store_info.store_id = menu_info.store_id	
-	where 1=1
+	where store_info.enabled='Y'
 		<if test="keywords != null">
 			and 	
 			<foreach collection="keywords" item="keyword" open="(" close=")" separator="or">

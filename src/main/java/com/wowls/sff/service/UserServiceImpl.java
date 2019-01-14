@@ -90,8 +90,8 @@ public class UserServiceImpl {
 		}
 		
 		// 아이디 체크 (중복 확인)		
-		if(showUserInfo(paramMap).isEmpty()) {
-		}
+//		if(showUserInfo(paramMap)==null) {
+//		}
 	/*	
 		// 비밀번호 체크 (자리수, 영문자 및 숫자 조합 확인)
 		String userPw = paramMap.get("userPw");

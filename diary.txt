@@ -25,9 +25,14 @@
 => https://memorynotfound.com/spring-mail-sending-simplemailmessage-javamailsender-example/
 => http://www.kaushikbaruah.com/posts/email-service-with-spring-boot/
 
-
 - application.properties 암호화
 => https://www.baeldung.com/spring-boot-jasypt
+
+
+- controller에서 파라미터 받는법
+=> url?query=a -> @RequestParam
+   users/{userId} -> @PathVariable
+   post 등 -> @RequestBody
 
 ======================== wordchain ================================
 - Cannot load JDBC driver class 'com.mysql.jdbc.Driver'

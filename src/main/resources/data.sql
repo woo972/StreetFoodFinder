@@ -1,9 +1,17 @@
 
+/* users */
 insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('adm', '1', 'adm', 'ADM', 'Y', '20181214','20181225');
 insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('pro1', '1', 'provider1','PRO', 'Y', '20181225', '20181225');
 insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('pro2', '1', 'provider2','PRO', 'Y', '20181211','20181211');
 insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('con1', '1', 'consumer1','CON', 'Y','20181212','20181227');
 insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('con2', '1', 'consumer2','CON', 'Y','20181212','20181227');
+insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('con3', '1', 'consumer3','CON', 'Y','20181212','20181227');
+insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('con4', '1', 'consumer4','CON', 'Y','20181212','20181227');
+insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('con5', '1', 'consumer5','CON', 'Y','20181212','20181227');
+insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('con6', '1', 'consumer6','CON', 'Y','20181212','20181227');
+insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('con7', '1', 'consumer7','CON', 'Y','20181212','20181227');
+insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('con8', '1', 'consumer8','CON', 'Y','20181212','20181227');
+insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('con9', '1', 'consumer9','CON', 'Y','20181212','20181227');
 insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('pro3', '1', 'provider3','PRO', 'Y','20181212','20181227');
 insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('pro4', '1', 'provider4','PRO', 'Y','20181212','20181227');
 insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('pro5', '1', 'provider5','PRO', 'Y','20181212','20181227');
@@ -20,44 +28,93 @@ insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date,
 insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('pro16', '1', 'provider16','PRO', 'Y','20181212','20181227');
 insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('pro17', '1', 'provider17','PRO', 'Y','20181212','20181227');
 insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('pro18', '1', 'provider18','PRO', 'Y','20181212','20181227');
+insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('pro19', '1', 'provider19','PRO', 'Y','20181212','20181227');
+insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('pro20', '1', 'provider20','PRO', 'Y','20181212','20181227');
+insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('pro21', '1', 'provider21','PRO', 'Y','20181212','20181227');
+insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('pro22', '1', 'provider22','PRO', 'Y','20181212','20181227');
+insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('pro23', '1', 'provider23','PRO', 'Y','20181212','20181227');
+insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('pro24', '1', 'provider24','PRO', 'Y','20181212','20181227');
+insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('pro25', '1', 'provider25','PRO', 'Y','20181212','20181227');
+insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('pro26', '1', 'provider26','PRO', 'Y','20181212','20181227');
+insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('pro27', '1', 'provider27','PRO', 'Y','20181212','20190114');
+insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('pro28', '1', 'provider28','PRO', 'Y','20181212','20190114');
+insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('pro29', '1', 'provider29','PRO', 'Y','20181212','20190114');
+insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('pro30', '1', 'provider30','PRO', 'Y','20181212','20190114');
+insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('pro31', '1', 'provider31','PRO', 'Y','20181212','20190114');
+insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('pro32', '1', 'provider32','PRO', 'Y','20181212','20190114');
+insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('pro33', '1', 'provider33','PRO', 'Y','20181212','20190114');
+insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('pro34', '1', 'provider34','PRO', 'Y','20181212','20190114');
+insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('pro35', '1', 'provider35','PRO', 'Y','20181212','20190114');
+insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('pro36', '1', 'provider36','PRO', 'Y','20181212','20190114');
+insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('pro37', '1', 'provider37','PRO', 'Y','20181212','20190114');
+insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('pro38', '1', 'provider38','PRO', 'Y','20181212','20190114');
+insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('pro39', '1', 'provider39','PRO', 'Y','20181212','20190114');
+insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('pro40', '1', 'provider40','PRO', 'Y','20181212','20190114');
+insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('pro41', '1', 'provider41','PRO', 'Y','20181212','20190114');
+insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('pro42', '1', 'provider42','PRO', 'Y','20181212','20190114');
+insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('pro43', '1', 'provider43','PRO', 'Y','20181212','20190114');
+insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('pro44', '1', 'provider44','PRO', 'Y','20181212','20190114');
+insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('pro45', '1', 'provider45','PRO', 'Y','20181212','20190114');
+insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('pro46', '1', 'provider46','PRO', 'Y','20181212','20190114');
+insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('pro47', '1', 'provider47','PRO', 'Y','20181212','20190114');
+insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('pro48', '1', 'provider48','PRO', 'Y','20181212','20190114');
+insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('pro49', '1', 'provider49','PRO', 'Y','20181212','20190114');
+insert into user_info (user_id, user_pw, user_name,user_type, enabled, cre_date, upd_date) values ('pro50', '1', 'provider50','PRO', 'Y','20181212','20190114');
 
-insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) 
-values ('store1','pro1','store1','this is store1',37.497944,127.027618, 'Y', '20181214','20181225');
-insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) 
-values ('store2','pro1','store2','this is store2',37.498710,127.029480, 'Y', '20181214','20181225');
-insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) 
-values ('store3','pro2','store3','this is store3',37.498130,127.029110, 'Y', '20181214','20181225');
-insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) 
-values ('store4','pro3','store4','this is store4',37.498130,127.029310, 'Y', '20181214','20181225');
-insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) 
-values ('store5','pro4','store5','this is store5',37.498430,127.029110, 'Y', '20181214','20181225');
-insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) 
-values ('store6','pro5','store6','this is store6',37.496130,127.029210, 'Y', '20181214','20181225');
-insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) 
-values ('store7','pro6','store7','this is store7',37.497130,127.029120, 'Y', '20181214','20181225');
-insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) 
-values ('store8','pro7','store8','this is store8',37.458130,127.029160, 'Y', '20181214','20181225');
-insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) 
-values ('store9','pro8','store9','this is store9',37.458130,127.029150, 'Y', '20181214','20181225');
-insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) 
-values ('store10','pro9','store10','this is store10',37.498830,127.029910, 'Y', '20181214','20181225');
-insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) 
-values ('store11','pro10','store11','this is store11',37.493130,127.020110, 'Y', '20181214','20181225');
-insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) 
-values ('store12','pro11','store12','this is store12',37.498430,127.029119, 'Y', '20181214','20181225');
-insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) 
-values ('store13','pro12','store13','this is store13',37.498335,127.029290, 'Y', '20181214','20181225');
-insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) 
-values ('store14','pro13','store14','this is store14',37.498330,127.029980, 'Y', '20181214','20181225');
-insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) 
-values ('store15','pro14','store15','this is store15',37.498333,127.029990, 'Y', '20181214','20181225');
-insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) 
-values ('store16','pro15','store16','this is store16',37.498330,127.021991, 'Y', '20181214','20181225');
-insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) 
-values ('store17','pro16','store17','this is store17',37.498030,127.029000, 'Y', '20181214','20181225');
-insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) 
-values ('store18','pro18','store18','this is store18',37.498311,127.029980, 'Y', '20181214','20181225');
 
+/* stores */
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store1','pro1','store1','this is store1',37.497944,127.027618, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store2','pro1','store2','this is store2',37.498710,127.029480, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store3','pro2','store3','this is store3',37.498130,127.029110, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store4','pro3','store4','this is store4',37.498130,127.029310, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store5','pro4','store5','this is store5',37.498430,127.029110, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store6','pro5','store6','this is store6',37.496130,127.029210, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store7','pro6','store7','this is store7',37.497130,127.029120, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store8','pro7','store8','this is store8',37.458130,127.029160, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store9','pro8','store9','this is store9',37.458130,127.029150, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store10','pro9','store10','this is store10',37.498830,127.029910, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store11','pro10','store11','this is store11',37.493130,127.020110, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store12','pro11','store12','this is store12',37.498430,127.029119, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store13','pro12','store13','this is store13',37.498335,127.029290, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store14','pro13','store14','this is store14',37.498330,127.029980, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store15','pro14','store15','this is store15',37.498333,127.029990, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store16','pro15','store16','this is store16',37.498330,127.021991, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store17','pro16','store17','this is store17',37.368030,127.229000, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store18','pro18','store18','this is store18',37.398311,127.119980, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store19','pro19','store19','this is store19',37.498311,127.035680, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store20','pro20','store20','this is store20',37.678311,127.029980, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store21','pro21','store21','this is store21',37.400311,127.429980, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store22','pro22','store22','this is store22',36.398311,126.029980, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store23','pro23','store23','this is store23',33.498311,122.329980, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store24','pro24','store24','this is store24',37.118331,127.459980, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store25','pro25','store25','this is store25',37.128311,127.349980, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store26','pro26','store26','this is store26',37.448311,127.549980, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store27','pro27','store27','this is store27',37.498001,126.039950, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store28','pro28','store28','this is store28',39.492311,125.049940, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store29','pro29','store29','this is store29',47.498311,137.059930, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store30','pro30','store30','this is store30',37.498000,137.069920, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store31','pro31','store31','this is store31',37.400311,127.979910, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store32','pro32','store32','this is store32',37.598311,127.088900, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store33','pro33','store33','this is store33',37.878613,127.098990, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store34','pro34','store34','this is store34',38.198756,128.003980, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store35','pro35','store35','this is store35',37.598811,127.015920, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store36','pro36','store36','this is store36',37.698911,127.024910, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store37','pro37','store37','this is store37',37.798111,127.033900, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store38','pro38','store38','this is store38',37.898311,127.042900, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store39','pro39','store39','this is store39',37.998211,127.051987, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store40','pro40','store40','this is store40',37.098311,127.069086, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store41','pro41','store41','this is store41',37.198411,127.079990, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store42','pro42','store42','this is store42',37.298511,127.089880, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store43','pro43','store43','this is store43',37.398361,127.097985, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store44','pro44','store44','this is store44',37.498317,127.099984, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store45','pro45','store45','this is store45',36.598318,127.099780, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store46','pro46','store46','this is store46',37.698391,128.009783, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store47','pro47','store47','this is store47',37.798301,127.019582, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store48','pro48','store48','this is store48',37.891311,127.019981, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store49','pro49','store49','this is store49',35.928351,126.023980, 'Y', '20181214','20181225');
+insert into store_info (store_id, owner_id, store_name, store_desc, store_lat, store_lon, enabled, cre_date, upd_date) values ('store50','pro50','store50','this is store50',37.498411,127.029480, 'Y', '20181214','20181225');
+
+/* menus */
 insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store1','붕어빵',1000, 'Y', '20181214','20181225');
 insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store1','붕어빵3',2000, 'Y','20181212','20181227');
 insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store1','크림붕어빵',2000, 'Y','20181212','20181227');
@@ -89,17 +146,95 @@ insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_d
 insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store16','핸드폰케이스F',5000, 'Y', '20181214','20181225');
 insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store16','핸드폰케이스C',5000, 'Y', '20181214','20181225');
 insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store17','땅콩과자',5000, 'Y', '20181214','20181225');
-insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store18','군밤',1000, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store18','군밤',90000, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store19','군밤',1000, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store20','군밤',1000, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store21','연필',2000, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store22','군밤',2000, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store23','군밤',1000, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store24','연필',1200, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store25','연필',1200, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store26','샤프',1500, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store27','샤프',1500, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store28','볼펜',5000, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store29','모나미',1000, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store30','몬아미',1000, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store31','색연필',1000, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store32','드라이버',1000, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store33','군밤',7000, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store34','나사',1000, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store35','십자드라이버',1000, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store36','군밤',6000, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store37','포스트잇',1000, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store38','컵',1000, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store39','머그',1000, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store39','소주잔',5000, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store39','맥주잔',4000, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store39','와인잔',4000, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store39','양주잔',2000, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store40','군밤',1100, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store41','오징어구이',10004, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store41','맥반석오징어구이',13000, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store41','먹태',0000, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store41','짝태',0000, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store41','명태',0000, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store41','고등어',0000, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store42','고드름',0000, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store43','타코야끼',9000, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store43','야키소바',1000, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store44','야끼소바',1000, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store45','토마토야끼소바',1345, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store46','몬자야끼',1111, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store46','치즈몬자',1001, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store46','토리야키',1100, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store47','군밤',10500, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store47','생밤',10000, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store48','어린이도서',1300, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store48','성인도서',11000, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store49','오가피',6000, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store49','계피',5000, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store50','고등어',4000, 'Y', '20181214','20181225');
+insert into menu_info (store_id, menu_name, menu_price, enabled, cre_date, upd_date) values('store50','조기',1300, 'Y', '20181214','20181225');
 
  
-
-insert into rating (store_id, rate, writer_id, comment, cre_date, upd_date) values('store1',10,'con1','very good','20181215','20181215');
-insert into rating (store_id, rate, writer_id, comment, cre_date, upd_date) values('store1',2,'con2','bad','20181215','20181215');
-insert into rating (store_id, rate, writer_id, comment, cre_date, upd_date) values('store2',8,'con1','hmm','20181215','20181215');
-insert into rating (store_id, rate, writer_id, comment, cre_date, upd_date) values('store2',5,'con2','test msg','20181215','20181215');
-insert into rating (store_id, rate, writer_id, comment, cre_date, upd_date) values('store2',6,'adm','good-good','20181215','20181215');
-insert into rating (store_id, rate, writer_id, comment, cre_date, upd_date) values('store3',10,'con2','not bad','20181215','20181215');
-insert into rating (store_id, rate, writer_id, comment, cre_date, upd_date) values('store4',10,'con2','not bad','20181215','20181215');
-insert into rating (store_id, rate, writer_id, comment, cre_date, upd_date) values('store5',10,'con2','bad','20181215','20181215');
-insert into rating (store_id, rate, writer_id, comment, cre_date, upd_date) values('store6',10,'con2','huh?','20181215','20181215');
-insert into rating (store_id, rate, writer_id, comment, cre_date, upd_date) values('store7',10,'con2','abc~','20181215','20181215');
+/* reviews */ 
+insert into review (store_id, rate, writer_id, comment, cre_date, upd_date) values('store1',10,'con1','very good','20181215','20181215');
+insert into review (store_id, rate, writer_id, comment, cre_date, upd_date) values('store1',2,'con2','bad','20181215','20181215');
+insert into review (store_id, rate, writer_id, comment, cre_date, upd_date) values('store2',8,'con1','hmm','20181215','20181215');
+insert into review (store_id, rate, writer_id, comment, cre_date, upd_date) values('store2',5,'con2','test msg','20181215','20181215');
+insert into review (store_id, rate, writer_id, comment, cre_date, upd_date) values('store2',6,'adm','good-good','20181215','20181215');
+insert into review (store_id, rate, writer_id, comment, cre_date, upd_date) values('store3',10,'con2','not bad','20181215','20181215');
+insert into review (store_id, rate, writer_id, comment, cre_date, upd_date) values('store4',10,'con2','not bad','20181215','20181215');
+insert into review (store_id, rate, writer_id, comment, cre_date, upd_date) values('store5',10,'con2','bad','20181215','20181215');
+insert into review (store_id, rate, writer_id, comment, cre_date, upd_date) values('store6',1,'con2','huh?','20181215','20181215');
+insert into review (store_id, rate, writer_id, comment, cre_date, upd_date) values('store7',7,'con2','abc~','20181215','20181215');
+insert into review (store_id, rate, writer_id, comment, cre_date, upd_date) values('store8',8,'con3','abc man!!','20181215','20181215');
+insert into review (store_id, rate, writer_id, comment, cre_date, upd_date) values('store9',10,'con3','abc~','20181215','20181215');
+insert into review (store_id, rate, writer_id, comment, cre_date, upd_date) values('store10',10,'con1','abcfff~','20181215','20181215');
+insert into review (store_id, rate, writer_id, comment, cre_date, upd_date) values('store10',10,'con2','abc~','20181215','20181215');
+insert into review (store_id, rate, writer_id, comment, cre_date, upd_date) values('store11',10,'con3','abc~','20181215','20181215');
+insert into review (store_id, rate, writer_id, comment, cre_date, upd_date) values('store12',9,'con4','abasdfc~','20181215','20181215');
+insert into review (store_id, rate, writer_id, comment, cre_date, upd_date) values('store12',9,'con5','abc~','20181215','20181215');
+insert into review (store_id, rate, writer_id, comment, cre_date, upd_date) values('store13',10,'con6','adddbc~','20181215','20181215');
+insert into review (store_id, rate, writer_id, comment, cre_date, upd_date) values('store14',9,'con7','hell~','20181215','20181215');
+insert into review (store_id, rate, writer_id, comment, cre_date, upd_date) values('store14',2,'con1','yo watsup','20181215','20181215');
+insert into review (store_id, rate, writer_id, comment, cre_date, upd_date) values('store15',10,'con2','abc~','20181215','20181215');
+insert into review (store_id, rate, writer_id, comment, cre_date, upd_date) values('store15',7,'con3','yeah','20181215','20181215');
+insert into review (store_id, rate, writer_id, comment, cre_date, upd_date) values('store16',10,'con3','hellhell','20181215','20181215');
+insert into review (store_id, rate, writer_id, comment, cre_date, upd_date) values('store16',10,'con4','abc~','20181215','20181215');
+insert into review (store_id, rate, writer_id, comment, cre_date, upd_date) values('store16',10,'con5','hellhellhellhell','20181215','20181215');
+insert into review (store_id, rate, writer_id, comment, cre_date, upd_date) values('store17',3,'con6','abc~','20181215','20181215');
+insert into review (store_id, rate, writer_id, comment, cre_date, upd_date) values('store18',10,'con7','oh!','20181215','20181215');
+insert into review (store_id, rate, writer_id, comment, cre_date, upd_date) values('store19',4,'con7','my~~~~~~','20181215','20181215');
+insert into review (store_id, rate, writer_id, comment, cre_date, upd_date) values('store20',10,'con1','super good','20181215','20181215');
+insert into review (store_id, rate, writer_id, comment, cre_date, upd_date) values('store21',10,'con2','abc~','20181215','20181215');
+insert into review (store_id, rate, writer_id, comment, cre_date, upd_date) values('store21',10,'con3','super good','20181215','20181215');
+insert into review (store_id, rate, writer_id, comment, cre_date, upd_date) values('store22',2,'con4','abc~','20181215','20181215');
+insert into review (store_id, rate, writer_id, comment, cre_date, upd_date) values('store23',10,'con5','amazing','20181215','20181215');
+insert into review (store_id, rate, writer_id, comment, cre_date, upd_date) values('store24',10,'con1','amazing','20181215','20181215');
+insert into review (store_id, rate, writer_id, comment, cre_date, upd_date) values('store25',6,'con2','abc~','20181215','20181215');
+insert into review (store_id, rate, writer_id, comment, cre_date, upd_date) values('store26',10,'con1','abc~','20181215','20181215');
+insert into review (store_id, rate, writer_id, comment, cre_date, upd_date) values('store26',10,'con2','wow','20181215','20181215');
+insert into review (store_id, rate, writer_id, comment, cre_date, upd_date) values('store26',10,'con3','shut up','20181215','20181215');
+insert into review (store_id, rate, writer_id, comment, cre_date, upd_date) values('store26',4,'con4','good','20181215','20181215');
+insert into review (store_id, rate, writer_id, comment, cre_date, upd_date) values('store26',3,'con5','cool man?','20181215','20181215');

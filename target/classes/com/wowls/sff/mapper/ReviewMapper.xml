@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wowls.sff.mapper.ReviewMapper">
+ 
+<insert id="saveReview" parameterType="java.util.Map">
+    insert into review (writer_id, store_id, rate, comment, cre_date, upd_date)
+    	values (#{writerId},#{storeId},#{rate},#{comment},'20190101','20190101');
+</insert>
+
+<select id="showReviewListByWriter" parameterType="java.util.Map" resultType="java.util.Map">
+    select review.store_id,
+    	   store_info.store_name,
+    	   review.rate,
+    	   review.comment,
+    	   review.cre_date,
+    	   review.upd_date
+  	from review left join store_info on review.store_id = store_info.store_id
+  	where review.writer_id = #{writerId}
+  	order by review.upd_date desc
+</select>
+
+<select id="showReviewListByStore" parameterType="java.util.Map" resultType="java.util.Map">
+    select review.writer_id,
+    	   user_info.user_name,
+    	   review.rate,
+    	   review.comment,
+    	   review.cre_date,
+    	   review.upd_date
+  	from review left join user_info on review.writer_id = user_info.user_id
+  	where review.store_id = #{storeId}
+  	order by review.upd_date desc
+</select>
+
+<update id="modifyReview" parameterType="java.util.Map">
+    update review 
+    	set review.rate=#{rate}, review.comment=#{comment}, review.upd_date='20190123'
+    	where review.writer_id=#{writerId}
+    		and review.store_id=#{storeId}
+</update>
+
+<delete id="removeReview" parameterType="java.util.Map">
+    delete from review 
+    	where review.writer_id = #{writerId} and review.store_id = #{storeId}
+</delete>
+
+
+
+</mapper>

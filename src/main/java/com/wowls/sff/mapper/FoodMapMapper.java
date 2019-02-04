@@ -13,6 +13,6 @@ public interface FoodMapMapper {
 
 	List<Map<String, Object>> showMenuList(Map<String, String> foodMapMap);
 
-	List<Map<String, Object>> showRatingList(Map<String, String> foodMapMap);
+	List<Map<String, Object>> showReviewList(Map<String, String> foodMapMap);
 
 }

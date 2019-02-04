@@ -49,6 +49,15 @@ create table store_info (
 );
 alter table store_info add primary key (store_id);
 
+drop table if exists store_image;
+create table store_image (
+	store_id varchar(20) not null, 
+	file_name varchar(30) not null,
+	file_order integer,
+	cre_date varchar(8),
+	upd_date varchar(8)	
+);
+alter table store_image add primary key (store_id, file_name);
 
 /* 타코야끼 8개에 천원 
  * 타코야끼 1팩에 천원...  각각 다른 단위가 있을 텐데 어떻게 정량화?
@@ -70,7 +79,7 @@ drop table if exists review;
 create table review (
 	writer_id varchar(20) not null,
 	store_id varchar(20) not null, 
-	rate integer,
+	rating integer,
 	comment varchar(300),
 	cre_date varchar(8),
 	upd_date varchar(8)	

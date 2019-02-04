@@ -4,14 +4,14 @@
 <mapper namespace="com.wowls.sff.mapper.ReviewMapper">
  
 <insert id="saveReview" parameterType="java.util.Map">
-    insert into review (writer_id, store_id, rate, comment, cre_date, upd_date)
-    	values (#{writerId},#{storeId},#{rate},#{comment},'20190101','20190101');
+    insert into review (writer_id, store_id, rating, comment, cre_date, upd_date)
+    	values (#{writerId},#{storeId},#{rating},#{comment},'20190101','20190101');
 </insert>
 
 <select id="showReviewListByWriter" parameterType="java.util.Map" resultType="java.util.Map">
     select review.store_id,
     	   store_info.store_name,
-    	   review.rate,
+    	   review.rating,
     	   review.comment,
     	   review.cre_date,
     	   review.upd_date
@@ -23,7 +23,7 @@
 <select id="showReviewListByStore" parameterType="java.util.Map" resultType="java.util.Map">
     select review.writer_id,
     	   user_info.user_name,
-    	   review.rate,
+    	   review.rating,
     	   review.comment,
     	   review.cre_date,
     	   review.upd_date

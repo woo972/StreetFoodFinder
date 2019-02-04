@@ -33,6 +33,17 @@
 => url?query=a -> @RequestParam
    users/{userId} -> @PathVariable
    post 등 -> @RequestBody
+   
+- rest api 파일 업로드
+=> https://www.callicoder.com/spring-boot-file-upload-download-rest-api-example/
+
+- 궁금증?
+=> 리뷰를 보여줄 때, 평균 평점을 같이 보여주어야 한다.
+   서버에서 계산? vs 클라이언트에서 계산?
+  서버에서 계산시, 각 로우에 컬럼을 추가하여 반환? vs list의 첫번째 map에 통계정보를 넣어서 반환?
+
+- 자바 정규식 매치 차이
+=> https://stackoverflow.com/questions/30008397/whats-the-difference-between-matcher-lookingat-and-find
 
 ======================== wordchain ================================
 - Cannot load JDBC driver class 'com.mysql.jdbc.Driver'

@@ -29,22 +29,22 @@ public class UserServiceImpl {
 		if(checkSignUpForm(paramMap)) {
 			
 			// 이메일 인증 절차
-			if(!userMapper.showNonce(paramMap).isEmpty()){
-				userMapper.removeNonce(paramMap);
-			}
-			String nonce="";
-			for(int i=0; i<6; i++) {
-				nonce += String.valueOf((int)Math.random()*10);
-			}
-			paramMap.put("nonce", nonce);
-			userMapper.saveNonce(paramMap);
+//			if(!userMapper.showNonce(paramMap).isEmpty()){
+//				userMapper.removeNonce(paramMap);
+//			}
+//			String nonce="";
+//			for(int i=0; i<6; i++) {
+//				nonce += String.valueOf((int)Math.random()*10);
+//			}
+//			paramMap.put("nonce", nonce);
+//			userMapper.saveNonce(paramMap);
 //			mailService.sendSimpleMessage("");
 			
 			paramMap.put("enabled", "N");
 			userMapper.saveUserInfo(paramMap);
 			
 			Map<String,String> nonceMap = new HashMap<String,String>();
-			nonceMap.put("nonce",nonce);
+//			nonceMap.put("nonce",nonce);
 			return nonceMap;
 		}else {
 			return null;

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="stomp.js"></script>
+	<script>
+		var stomp = null;
+		var roomId = null;
+		var addr = 'wowls-wordchain.azurewebsites.net/';
+		window.onload=function(){
+			var connect = document.getElementById("connect");
+			var disconnect = document.getElementById("disconnect");
+			var send = document.getElementById("send");
+			var showRoom = document.getElementById("showRoom");
+			var makeRoom = document.getElementById("makeRoom");
+			// 웹소켓 연결 버튼 클릭시 동작
+			connect.addEventListener("click",function(e){
+				stomp = Stomp.client("ws://"+addr+"ws/websocket"); // 해당 주소로 스톰프 프로토콜을 활용한 웹소켓 연결
+				stomp.connect({}, function (frame) {				
+					console.log('웹소켓 연결');
+					stomp.subscribe('/topic/rooms/'+roomId, function (msg) { // 해당 주소 구독(메시지 수신), 자바스크립트 특성상 subscribe매서드 인자로 function이 왔지만 안드로이드는 다른 방식일 겁니다
+						console.log('메시지 수신:'+msg.body);						
+						                          // JSON형태로 오기 때문에 파싱이 필요할 수도 있음 -> JSON.parse(greeting.body)
+					}); 
+				});			
+			});
+			
+			// 웹소켓 종료 버튼 클릭시 동작
+			disconnect.addEventListener("click",function(e){				
+				stomp.disconnect();
+				console.log("웹소켓 종료");
+			});
+			
+			// 메시지 전송 버튼 클릭시 동작
+			send.addEventListener("click",function(e){
+				// map 형태로 전달
+				var msg = {
+					userId: document.getElementById("userId").value,
+					text:  document.getElementById("msg").value
+				};                                                       
+				console.log('메시지 전송:'+JSON.stringify(msg));				
+				stomp.send("/wordchain/rooms/"+roomId,{},JSON.stringify(msg));	// 해당 주소를 메시지 전달 주소로 설정
+				                                 // JSON형태로 파싱하여 전달
+			});	
+			
+			// 방목록 보여주기
+			showRoom.addEventListener("click", function(e){
+				var httpRequest = new XMLHttpRequest();
+				
+				httpRequest.onreadystatechange = function(){
+					console.log('rslt:'+httpRequest.responseText);
+				};
+				httpRequest.open("GET","http://"+addr+"rooms/");
+				httpRequest.send();
+			});
+			
+			// 방 만들기
+			 makeRoom.addEventListener("click",function(e){
+				var httpRequest = new XMLHttpRequest();
+				var param = {
+					userId:document.getElementById("userId").value
+				};
+				httpRequest.open("POST","http://"+addr+"rooms/");
+				httpRequest.setRequestHeader("Content-type","application/json");
+				httpRequest.onreadystatechange = function(){
+					console.log("roomId:"+httpRequest.responseText);
+					roomId = httpRequest.responseText;
+				}
+				httpRequest.send(JSON.stringify(param));
+			 });
+		}
+	</script>
+
+</head>
+<body>
+
+	<p> Wordchain Test 1111 </p>
+
+	<input type="text" id="userId" placeholder="사용자 아이디1">
+	<input type="button" id="connect" value="웹소켓 연결3">
+	<input type="text" id="msg" placeholder="메시지 내용">
+	<input type="button" id="send" value="메시지 전송4">
+	<input type="button" id="disconnect" value="웹소켓 종료5">
+	
+	
+	
+	<p>room list</p>
+	<input type="button" id="showRoom" value="방 목록 조회">
+	<input type="button" id="makeRoom" value="방 만들기 / 방 입장하기2">
+	<div id ="roomList"></div>
+	
+</body>
+</html>

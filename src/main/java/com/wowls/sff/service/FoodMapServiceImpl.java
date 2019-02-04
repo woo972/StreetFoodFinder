@@ -53,12 +53,12 @@ public class FoodMapServiceImpl {
 	public Map<String,Object> showStoreInfo(Map<String, String> foodMapMap) {
 		Map<String,Object> storeInfo = foodMapMapper.showStoreInfo(foodMapMap); 
 		List<Map<String,Object>> menuList = foodMapMapper.showMenuList(foodMapMap); 
-		List<Map<String,Object>> ratingList =foodMapMapper.showRatingList(foodMapMap); 
+		List<Map<String,Object>> reviewList =foodMapMapper.showReviewList(foodMapMap); 
 		
 		Map<String,Object> storeInfoMap = new HashMap<String,Object>();
 		storeInfoMap.put("storeInfo", storeInfo);
 		storeInfoMap.put("menuList", menuList);
-		storeInfoMap.put("ratingList", ratingList);
+		storeInfoMap.put("reviewList", reviewList);
 		return storeInfoMap;
 	}
 	

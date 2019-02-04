@@ -3,7 +3,6 @@ package com.wowls.sff.service;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,13 +15,18 @@ public class StoreManagementServiceImpl {
 	private StoreManagementMapper storeManagementMapper;
 
 	public int saveStoreInfo(Map<String, String> storeMap) {
-		String ownerId = storeMap.get("ownerId");
-		if(StringUtils.isEmpty(storeMap.get("storeId"))) {
-			storeMap.put("storeId", ownerId+"_store");
-		}
-		if(StringUtils.isEmpty(storeMap.get("storeName"))) {
-			storeMap.put("storeId", ownerId+"의 가게");
-		}
+//		String ownerId = storeMap.get("ownerId");
+//		if(StringUtils.isEmpty(storeMap.get("storeId"))) {
+//			storeMap.put("storeId", ownerId+"_store");
+//		}
+//		if(StringUtils.isEmpty(storeMap.get("storeName"))) {
+//			storeMap.put("storeId", ownerId+"의 가게");
+//		}
+//		String fileName = storeMap.get("file");
+//		String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath()
+//															.path("/downloadFile")
+//															.path(fileName)
+//															.toUriString();
 		return storeManagementMapper.saveStoreInfo(storeMap);
 	}
 	

@@ -56,14 +56,14 @@
 	where menu_info.store_id = #{storeId}	
 </select>
 
-<select id="showRatingList" parameterType="java.util.Map" resultType="java.util.Map">
-	select rating.writer_id,
-		   rating.rate,
-		   rating.comment,
-		   rating.cre_date,
-		   rating.upd_date
-	from rating 
-	where rating.store_id = #{storeId}	
+<select id="showReviewList" parameterType="java.util.Map" resultType="java.util.Map">
+	select review.writer_id,
+		   review.rate,
+		   review.comment,
+		   review.cre_date,
+		   review.upd_date
+	from review 
+	where review.store_id = #{storeId}	
 </select>
  
 </mapper>

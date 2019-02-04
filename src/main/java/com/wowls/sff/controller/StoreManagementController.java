@@ -32,9 +32,11 @@ public class StoreManagementController {
 	@PostMapping("/owners/{ownerId}/stores*")
 	public ResponseEntity<List<Map<String,Object>>> saveStoreInfo(@PathVariable("ownerId") String ownerId,
 																  @RequestBody Map<String,String> storeMap) {
+		System.out.println("controller");
 		// 존재하는 유저만이 상점 개설 가능
-		storeMap.put("userId", ownerId);
-		if(!userService.showUserInfo(storeMap).isEmpty()) {
+		Map<String,String> userMap = new HashMap<String,String>();
+		userMap.put("userId", ownerId);
+		if(userService.showUserInfo(userMap)!=null) {
 			storeMap.put("ownerId", ownerId);
 			int rsltCode = storeManagementService.saveStoreInfo(storeMap);
 			if(rsltCode > 0) {
@@ -54,6 +56,7 @@ public class StoreManagementController {
 																 @RequestBody Map<String,String> menuMap) {
 		// 존재하는 가게 일 때만 메뉴 등록 가능
 		menuMap.put("storeId", storeId);
+		menuMap.put("ownerId", ownerId);
 		if(!storeManagementService.showOwnStoreList(menuMap).isEmpty()) {
 			int rsltCode = storeManagementService.saveMenuInfo(menuMap);
 			if(rsltCode > 0) {

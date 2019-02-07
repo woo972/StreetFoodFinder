@@ -58,7 +58,7 @@
 
 <select id="showReviewList" parameterType="java.util.Map" resultType="java.util.Map">
 	select review.writer_id,
-		   review.rate,
+		   review.rating,
 		   review.comment,
 		   review.cre_date,
 		   review.upd_date

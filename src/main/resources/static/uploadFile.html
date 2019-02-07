@@ -19,10 +19,10 @@ var multipleFileUploadSuccess = document.querySelector('#multipleFileUploadSucce
 
 function uploadSingleFile(file) {
     var formData = new FormData();
-    formData.append("fileArr", file);
+    formData.append("imageArr", file);
 
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "/file-storage/stores/store1");
+    xhr.open("POST", "/image-storage/stores/store10");
 
     xhr.onload = function() {
         console.log(xhr.responseText);
@@ -43,11 +43,11 @@ function uploadSingleFile(file) {
 function uploadMultipleFiles(files) {
     var formData = new FormData();
     for(var index = 0; index < files.length; index++) {
-        formData.append("fileArr", files[index]);
+        formData.append("imageArr", files[index]);
     }
 
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "/file-storage/stores/store1");
+    xhr.open("POST", "/image-storage/stores/store10");
     
     xhr.onload = function() {
         console.log(xhr.responseText);

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wowls.sff.mapper.ImageStorageMapper">
+ 
+<insert id="saveImage" parameterType="java.util.Map">
+	insert into store_image (store_id, image_name, image_order, cre_date, upd_date)
+		values(#{storeId}, #{imageName}, #{imageOrder}, '20190203','20190204')
+</insert>
+
+<select id="showImageList" parameterType="java.util.Map" resultType="String">
+	select store_image.image_name			
+	from store_image
+	where store_image.store_id=#{storeId}
+	order by store_image.image_order			
+			
+</select>
+</mapper>

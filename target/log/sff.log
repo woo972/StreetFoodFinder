@@ -1,0 +1,162 @@
+21:20:51.621 [main] INFO  c.w.sff.StreetFoodFinderApplication - Starting StreetFoodFinderApplication v1.0.0 on DESKTOP-CQVQS73 with PID 20388 (C:\Users\dntnr\Desktop\Projects\eclipse_workspace\StreetFoodFinder\target\sff-1.0.0.jar started by dntnr in C:\Users\dntnr\Desktop\Projects\eclipse_workspace\StreetFoodFinder\target)
+21:20:51.625 [main] DEBUG c.w.sff.StreetFoodFinderApplication - Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+21:20:51.626 [main] INFO  c.w.sff.StreetFoodFinderApplication - No active profile set, falling back to default profiles: default
+21:20:51.738 [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@41c2284a: startup date [Wed Feb 06 21:20:51 KST 2019]; root of context hierarchy
+21:20:53.747 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor - Post-processing PropertySource instances
+21:20:53.861 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+21:20:53.861 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+21:20:53.862 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+21:20:53.862 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemProperties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+21:20:53.862 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+21:20:53.862 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+21:20:53.862 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource applicationConfig: [classpath:/application.properties] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+21:20:54.055 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$56e9f24] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+21:20:54.309 [main] INFO  c.u.j.r.DefaultLazyPropertyResolver - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+21:20:54.312 [main] INFO  c.u.j.d.DefaultLazyPropertyDetector - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+21:20:54.867 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 7701 (http)
+21:20:54.886 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-7701"]
+21:20:54.907 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+21:20:54.908 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+21:20:54.932 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre-10.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Git\cmd;C:\nodejs\;C:\Users\dntnr\AppData\Local\Android\Sdkplatform-tools;C:\Users\dntnr\AppData\Local\Android\Sdktools;C:\WINDOWS\System32\OpenSSH\;C:\Users\dntnr\Desktop\apache-maven-3.5.4\bin;D:\Program Files\PuTTY\;C:\Users\dntnr\AppData\Local\Microsoft\WindowsApps;D:\Program Files\;C:\Users\dntnr\AppData\Roaming\npm;C:\Users\dntnr\AppData\Local\GitHubDesktop\bin;.]
+21:20:55.025 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+21:20:55.025 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3287 ms
+21:20:55.265 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+21:20:55.267 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet webServlet mapped to [/h2-console/*]
+21:20:55.272 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+21:20:55.273 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+21:20:55.273 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+21:20:55.273 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+21:20:55.533 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+21:20:55.744 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+21:20:55.760 [main] INFO  o.s.jdbc.datasource.init.ScriptUtils - Executing SQL script from URL [jar:file:/C:/Users/dntnr/Desktop/Projects/eclipse_workspace/StreetFoodFinder/target/sff-1.0.0.jar!/BOOT-INF/classes!/schema.sql]
+21:20:55.782 [main] INFO  o.s.jdbc.datasource.init.ScriptUtils - Executed SQL script from URL [jar:file:/C:/Users/dntnr/Desktop/Projects/eclipse_workspace/StreetFoodFinder/target/sff-1.0.0.jar!/BOOT-INF/classes!/schema.sql] in 22 ms.
+21:20:55.790 [main] INFO  o.s.jdbc.datasource.init.ScriptUtils - Executing SQL script from URL [jar:file:/C:/Users/dntnr/Desktop/Projects/eclipse_workspace/StreetFoodFinder/target/sff-1.0.0.jar!/BOOT-INF/classes!/data.sql]
+21:20:55.852 [main] INFO  o.s.jdbc.datasource.init.ScriptUtils - Executed SQL script from URL [jar:file:/C:/Users/dntnr/Desktop/Projects/eclipse_workspace/StreetFoodFinder/target/sff-1.0.0.jar!/BOOT-INF/classes!/data.sql] in 61 ms.
+21:20:57.325 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/stores*/search],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<java.util.Map<java.lang.String, java.lang.Object>>> com.wowls.sff.controller.FoodMapController.showStoreList(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+21:20:57.343 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/stores*/{storeId}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> com.wowls.sff.controller.FoodMapController.showStoreInfo(java.lang.String)
+21:20:57.344 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/test],methods=[GET]}" onto public java.lang.String com.wowls.sff.controller.TestController.test()
+21:20:57.394 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/users*/test],methods=[GET]}" onto public java.lang.String com.wowls.sff.controller.UserController.test()
+21:20:57.398 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/users*/{userId}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.wowls.sff.controller.UserController.modifyUserInfo(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+21:20:57.399 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/users*],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.String>> com.wowls.sff.controller.UserController.saveUserInfo(java.util.Map<java.lang.String, java.lang.String>)
+21:20:57.406 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/users*/activate/{userId}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.wowls.sff.controller.UserController.activateAccount(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+21:20:57.408 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/users*],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<java.util.Map<java.lang.String, java.lang.String>>> com.wowls.sff.controller.UserController.showUserList()
+21:20:57.408 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/users*/{userId}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.String>> com.wowls.sff.controller.UserController.showUserInfo(java.lang.String)
+21:20:57.408 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/users*/{userId}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.wowls.sff.controller.UserController.removeUser(java.lang.String)
+21:20:57.409 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/boards*],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.wowls.sff.controller.BoardController.savePost(java.util.Map<java.lang.String, java.lang.String>)
+21:20:57.411 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/reviews*/writers/{writerId}/stores/{storeId}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.wowls.sff.controller.ReviewController.removeReview(java.lang.String,java.lang.String)
+21:20:57.411 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/reviews*/writers/{writerId}/stores],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.wowls.sff.controller.ReviewController.saveReview(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+21:20:57.412 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/reviews*/writers/{writerId}/stores/{storeId}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.wowls.sff.controller.ReviewController.modifyReview(java.lang.String,java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+21:20:57.412 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/reviews*/stores/{storeId}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<java.util.Map<java.lang.String, java.lang.Object>>> com.wowls.sff.controller.ReviewController.showReviewListByStore(java.lang.String)
+21:20:57.413 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/reviews*/writers/{writerId}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<java.util.Map<java.lang.String, java.lang.Object>>> com.wowls.sff.controller.ReviewController.showReviewListByWriter(java.lang.String)
+21:20:57.415 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/store-management*/owners/{ownerId}/stores*],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<java.util.Map<java.lang.String, java.lang.Object>>> com.wowls.sff.controller.StoreManagementController.showStoreList(java.lang.String)
+21:20:57.419 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/store-management*/owners/{ownerId}/stores/{storeId}/menus/{menuName}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.wowls.sff.controller.StoreManagementController.modifyMenuInfo(java.lang.String,java.lang.String,java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+21:20:57.421 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/store-management*/owners/{ownerId}/stores/{storeId}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.wowls.sff.controller.StoreManagementController.removeOwnStoreInfo(java.lang.String,java.lang.String)
+21:20:57.421 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/store-management*/owners/{ownerId}/stores/{storeId}/menus*],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.util.List<java.util.Map<java.lang.String, java.lang.Object>>> com.wowls.sff.controller.StoreManagementController.saveMenuInfo(java.lang.String,java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+21:20:57.422 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/store-management*/owners/{ownerId}/stores/{storeId}/menus/{menuName}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.wowls.sff.controller.StoreManagementController.removeMenuInfo(java.lang.String,java.lang.String,java.lang.String)
+21:20:57.423 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/store-management*/owners/{ownerId}/stores/{storeId}/menus*],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<java.util.Map<java.lang.String, java.lang.Object>>> com.wowls.sff.controller.StoreManagementController.showOwnMenuList(java.lang.String,java.lang.String)
+21:20:57.424 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/store-management*/owners/{ownerId}/stores/{storeId}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.wowls.sff.controller.StoreManagementController.modifyStoreInfo(java.lang.String,java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+21:20:57.424 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/store-management*/owners/{ownerId}/stores*],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.util.List<java.util.Map<java.lang.String, java.lang.Object>>> com.wowls.sff.controller.StoreManagementController.saveStoreInfo(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+21:20:57.425 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/file-storage/stores/{storeId}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.wowls.sff.controller.FileStorageController.saveFileList(java.lang.String,org.springframework.web.multipart.MultipartFile)
+21:20:57.426 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/favorite*/{storeId}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.wowls.sff.controller.FavoriteController.saveFavoriteStore(java.lang.String)
+21:20:57.429 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+21:20:57.430 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+21:20:57.431 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+21:20:57.434 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+21:20:57.436 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+21:20:57.893 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+21:20:58.030 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService  'clientInboundChannelExecutor'
+21:20:58.042 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService  'clientOutboundChannelExecutor'
+21:20:58.055 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService  'messageBrokerTaskScheduler'
+21:20:58.126 [main] INFO  o.s.w.s.s.s.WebSocketHandlerMapping - Mapped URL path [/ws/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+21:20:58.147 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService  'brokerChannelExecutor'
+21:20:58.364 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+21:20:58.479 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@41c2284a: startup date [Wed Feb 06 21:20:51 KST 2019]; root of context hierarchy
+21:20:58.636 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+21:20:58.636 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+21:20:59.273 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+21:20:59.275 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+21:20:59.280 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+21:20:59.289 [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+21:20:59.290 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+21:20:59.326 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+21:20:59.407 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+21:20:59.677 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: showStoreListUsingGET_1
+21:20:59.698 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: testUsingGET_1
+21:20:59.711 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+21:20:59.711 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+21:20:59.712 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+21:20:59.720 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-7701"]
+21:20:59.736 [main] ERROR o.a.catalina.core.StandardService - Failed to start connector [Connector[HTTP/1.1-7701]]
+org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-7701]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:256)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:198)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:300)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.wowls.sff.StreetFoodFinderApplication.main(StreetFoodFinderApplication.java:15)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:50)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:51)
+Caused by: org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1020)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 21 common frames omitted
+Caused by: java.net.BindException: Address already in use: bind
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Unknown Source)
+	at java.base/sun.nio.ch.Net.bind(Unknown Source)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1150)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:591)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1018)
+	... 22 common frames omitted
+21:20:59.740 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-7701"]
+21:20:59.741 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+21:20:59.752 [main] INFO  o.apache.catalina.util.LifecycleBase - The stop() method was called on component [StandardServer[-1]] after stop() had already been called. The second call will be ignored.
+21:20:59.752 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-7701"]
+21:20:59.753 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-7701"]
+21:20:59.759 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+21:20:59.761 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 7701 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 7701, or configure this application to listen on another port.
+
+21:20:59.763 [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@41c2284a: startup date [Wed Feb 06 21:20:51 KST 2019]; root of context hierarchy
+21:20:59.770 [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+21:20:59.771 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+21:20:59.771 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+21:20:59.771 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+21:20:59.772 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+21:20:59.772 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+21:20:59.773 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'brokerChannelExecutor'
+21:20:59.774 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'messageBrokerTaskScheduler'
+21:20:59.774 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientOutboundChannelExecutor'
+21:20:59.774 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientInboundChannelExecutor'
+21:20:59.776 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+21:20:59.779 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

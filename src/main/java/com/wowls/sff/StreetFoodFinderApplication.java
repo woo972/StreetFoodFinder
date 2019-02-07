@@ -6,7 +6,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 
 @SpringBootApplication(scanBasePackages= {"com.wowls.sff"})
 @EnableConfigurationProperties({
-	FileStorageConfig.class
+	ImageStorageConfig.class
 })
 public class StreetFoodFinderApplication {
 

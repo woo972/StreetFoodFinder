@@ -34,7 +34,7 @@
 
 <update id="modifyReview" parameterType="java.util.Map">
     update review 
-    	set review.rate=#{rate}, review.comment=#{comment}, review.upd_date='20190123'
+    	set review.rating=#{rating}, review.comment=#{comment}, review.upd_date='20190123'
     	where review.writer_id=#{writerId}
     		and review.store_id=#{storeId}
 </update>

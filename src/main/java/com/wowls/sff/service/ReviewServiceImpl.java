@@ -17,13 +17,13 @@ public class ReviewServiceImpl {
 	public int saveReview(Map<String,String> reviewMap) {
 		
 		int MaxBytesOfComment = 300;
-		int maxSizeOfRate = 5;
-		int minSizeOfRate = 0;
+		int maxSizeOfrating = 5;
+		int minSizeOfrating = 0;
 		
-		int rate = Integer.parseInt(reviewMap.get("rate"));
+		int rating = Integer.parseInt(reviewMap.get("rating"));
 		String comment = reviewMap.get("comment");
 		
-		if(rate < minSizeOfRate || rate > maxSizeOfRate) {
+		if(rating < minSizeOfrating || rating > maxSizeOfrating) {
 			return 0;
 		}
 		if(comment.getBytes().length > MaxBytesOfComment) {
@@ -40,13 +40,13 @@ public class ReviewServiceImpl {
 	}
 	public int modifyReview(Map<String,String> reviewMap) {
 		int MaxBytesOfComment = 300;
-		int maxSizeOfRate = 5;
-		int minSizeOfRate = 0;
+		int maxSizeOfrating = 5;
+		int minSizeOfrating = 0;
 		
-		int rate = Integer.parseInt(reviewMap.get("rate"));
+		int rating = Integer.parseInt(reviewMap.get("rating"));
 		String comment = reviewMap.get("comment");
 		
-		if(rate < minSizeOfRate || rate > maxSizeOfRate) {
+		if(rating < minSizeOfrating || rating > maxSizeOfrating) {
 			return 0;
 		}
 		if(comment.getBytes().length > MaxBytesOfComment) {

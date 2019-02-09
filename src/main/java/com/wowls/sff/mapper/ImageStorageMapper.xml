@@ -8,11 +8,24 @@
 		values(#{storeId}, #{imageName}, #{imageOrder}, '20190203','20190204')
 </insert>
 
-<select id="showImageList" parameterType="java.util.Map" resultType="String">
+<select id="showImageNameByImageOrder" parameterType="java.util.Map" resultType="String">
 	select store_image.image_name			
 	from store_image
 	where store_image.store_id=#{storeId}
-	order by store_image.image_order			
+	  and store_image.image_order=#{imageOrder}			
 			
 </select>
+
+<select id="showImageNameByImageName" parameterType="java.util.Map" resultType="String">
+	select store_image.image_name			
+	from store_image
+	where store_image.store_id=#{storeId}
+	  and store_image.image_name=#{imageName}			
+			
+</select>
+
+<!-- <delete id="removeImage" parameterType="java.util.Map">
+	delete from store_image where store_id = #{storeId} and image_name = #{imageName}
+</delete>
+ -->
 </mapper>

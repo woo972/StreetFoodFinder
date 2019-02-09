@@ -34,8 +34,11 @@
    users/{userId} -> @PathVariable
    post 등 -> @RequestBody
    
-- rest api 파일 업로드
-=> https://www.callicoder.com/spring-boot-file-upload-download-rest-api-example/
+- rest api 파일 업로드 / 다운로드
+=> https://www.callicoder.com/spring-boot-file-upload-download-rest-api-example/ (resource)
+=> https://stackoverflow.com/questions/35680932/download-a-file-from-spring-boot-rest-service (resource)
+=> https://o7planning.org/en/11765/spring-boot-file-download-example (autowired servelet context)
+=> https://antananarivo.tistory.com/63 (byte array)
 
 - 궁금증?
 => 리뷰를 보여줄 때, 평균 평점을 같이 보여주어야 한다.
@@ -44,6 +47,9 @@
 
 - 자바 정규식 매치 차이
 => https://stackoverflow.com/questions/30008397/whats-the-difference-between-matcher-lookingat-and-find
+
+- 스프링부트에서 외부 정적 페이지 참조  
+=> https://jsonobject.tistory.com/221
 
 ======================== wordchain ================================
 - Cannot load JDBC driver class 'com.mysql.jdbc.Driver'

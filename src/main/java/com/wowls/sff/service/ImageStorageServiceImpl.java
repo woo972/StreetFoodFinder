@@ -6,8 +6,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -47,12 +45,11 @@ public class ImageStorageServiceImpl {
     	String storeId = (String) imageMap.get("storeId");
     	MultipartFile[] imageArr = (MultipartFile[]) imageMap.get("imageArr");
     	imageMap.remove("imageArr");   
+    	Pattern extensionPattern = Pattern.compile("(.+)\\.(jpg|jpeg|png|gif|bmp|heif)");
     	for(int order=0; order<imageArr.length; order++) {
-//    		 Normalize image name
+            // Normalize image name
             String imageName = StringUtils.cleanPath(imageArr[order].getOriginalFilename());
-            
             // check image extenstion
-            Pattern extensionPattern = Pattern.compile("(.+)\\.(jpg|jpeg|png|gif|bmp|heif)");
             Matcher extensionPatternMatcher = extensionPattern.matcher(imageName.toLowerCase());
             String extension;
             if(extensionPatternMatcher.matches()) {
@@ -77,26 +74,52 @@ public class ImageStorageServiceImpl {
     	return imageArr.length;
     }
 
-    public Resource loadimageAsResource(String imageName) {
-        try {
-            Path imagePath = this.imageStorageLocation.resolve(imageName).normalize();
-            Resource resource = new UrlResource(imagePath.toUri());
-            if(resource.exists()) {
-                return resource;
-            } else {
-                return null;
-            }
-        } catch (MalformedURLException ex) {
-            return null;
-        }
-    }
-
-	public List<String> showImageList(Map<String,String> imageMap) {
-		List<String> imageNameList = imageStorageMapper.showImageList(imageMap);
-		List<String> imageList = new ArrayList<String>();
-		for(String imageName : imageNameList) {
-			imageList.add(imageStorageLocation+"/"+imageName);
+    public Resource showImage(Map<String,Object> imageMap) {
+    	String imageName = imageStorageMapper.showImageNameByImageOrder(imageMap);
+    	Path normalizedImageName = this.imageStorageLocation.resolve(imageName).normalize(); 
+    	Resource imageResource;
+		try {
+			imageResource = new UrlResource(normalizedImageName.toUri());
+		} catch (MalformedURLException e) {
+			return null;
 		}
-		return imageList;
-	}	
+    	return imageResource;
+    }
+    
+    public int modifyImage(Map<String,Object> imageMap) {
+    	String storeId = (String)imageMap.get("storeId");
+    	String imageName = (String)imageMap.get("imageName");
+    	if(imageName.equals(imageStorageMapper.showImageNameByImageName(imageMap))){
+    		MultipartFile image = (MultipartFile)imageMap.get("imageArr");
+    		try {
+    			Path targetLocation = this.imageStorageLocation.resolve(imageName);
+    			Files.copy(image.getInputStream(), targetLocation, StandardCopyOption.REPLACE_EXISTING);
+    		} catch (IOException ex) {
+    			logger.error("Could not store image " + imageName + ". Please try again!");
+    			return 0;
+    		}	 
+    	}else{
+        	return 0;
+        }
+    	return 1;
+    }    
+    public int removeImage(Map<String,Object> imageMap) {
+    	String imageName = (String)imageMap.get("imageName");
+    	if(imageName.equals(imageStorageMapper.showImageNameByImageName(imageMap))){
+//    		if(imageStorageMapper.removeImage(imageMap) > 0) {
+    			try {
+    				Path targetLocation = this.imageStorageLocation.resolve(imageName);
+    				Files.delete(targetLocation);
+    			} catch (IOException ex) {
+    				logger.error("Could not store image " + imageName + ". Please try again!");
+    				return 0;
+    			}	 
+    		}else {
+    			return 0;
+    		}
+//    	}else{
+//    		return 0;
+//    	}
+    	return 1;
+    }    
 }

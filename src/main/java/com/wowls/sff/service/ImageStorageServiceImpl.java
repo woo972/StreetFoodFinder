@@ -106,7 +106,7 @@ public class ImageStorageServiceImpl {
     public int removeImage(Map<String,Object> imageMap) {
     	String imageName = (String)imageMap.get("imageName");
     	if(imageName.equals(imageStorageMapper.showImageNameByImageName(imageMap))){
-//    		if(imageStorageMapper.removeImage(imageMap) > 0) {
+    		if(imageStorageMapper.removeImage(imageMap) > 0) {
     			try {
     				Path targetLocation = this.imageStorageLocation.resolve(imageName);
     				Files.delete(targetLocation);
@@ -117,9 +117,9 @@ public class ImageStorageServiceImpl {
     		}else {
     			return 0;
     		}
-//    	}else{
-//    		return 0;
-//    	}
+    	}else{
+    		return 0;
+    	}
     	return 1;
     }    
 }

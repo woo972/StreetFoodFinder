@@ -53,7 +53,7 @@ public class ImageStorageController {
 		}
     }
 	
-    @GetMapping("/stores/{storeId}/images")
+    @GetMapping("/stores/{storeId}/images/search")
     public ResponseEntity<Resource> showImage(@PathVariable("storeId") String storeId,
     									      @RequestParam(value="imageOrder") int imageOrder) {
     	Map<String,Object> imageMap = new HashMap<String,Object>();

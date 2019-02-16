@@ -110,20 +110,20 @@ alter table favorite add primary key (user_id,store_id);
 --); 
 --alter table notice add primary key (notice_id);
 
-drop table if exists community;
-create table community (
+drop table if exists topic;
+create table topic (
+	topic_id varchar(34) not null,
 	writer_id varchar(20) not null,
-	post_id varchar(20) not null,
 	title varchar(20) not null,
-	content varchar(500),
+	content varchar(1000),
 	view_cnt integer,
-	like_cnt integer,
-	unlike_cnt integer,
+	upvote_cnt integer,	
 	cre_date varchar(8),
-	upd_date varchar(8)
-	
+	cre_time varchar(6),
+	upd_date varchar(8),
+	upd_time varchar(6)
 );
-alter table community add primary key (post_id);
+alter table topic add primary key (topic_id);
 
 drop table if exists reply;
 create table reply (

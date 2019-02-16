@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wowls.sff.mapper.TopicMapper">
+ 
+<insert id="saveTopic" parameterType="java.util.Map">
+	insert into topic 
+		(topic_id,writer_id,title,content,cre_date,cre_time,upd_date,upd_time)
+		values (#{topicId},#{writerId},#{title},#{content},#{creDate},#{creTime},#{updDate},#{updTime})
+</insert> 
+ 
+<select id="showTopicList" parameterType="java.util.Map" resultType="java.util.Map">
+	select topic.topic_id,
+		   topic.writer_id,
+		   topic.title,
+		   topic.content,
+		   topic.cre_date,
+		   topic.cre_time,
+		   topic.upd_date,
+		   topic.upd_time
+	from topic 	
+	where 1=1
+		<if test="writerId != null">
+			and	topic.writer_id = #{writerId}			
+		</if>
+		<if test="cartegory != null">
+			and	topic.category = #{category}			
+		</if>
+		<if test="keywords != null">
+			and	topic.title like '%'||#{keyword}||'%'			
+				or	topic.content like '%'||#{keyword}||'%'	
+				or	topic.writer_id like '%'||#{keyword}||'%'
+		</if>
+	order by cre_date desc, cre_time desc		
+</select>
+
+<select id="showTopicListByWriterId" parameterType="java.util.Map" resultType="java.util.Map">
+	select topic.topic_id,
+		   topic.title,
+		   topic.content,
+		   topic.cre_date,
+		   topic.cre_time,
+		   topic.upd_date,
+		   topic.upd_time
+	from topic 	
+	where topic.writer_id = #{writerId}
+	order by cre_date desc, cre_time desc		
+</select>
+
+
+</mapper>

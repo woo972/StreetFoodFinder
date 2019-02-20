@@ -10,4 +10,6 @@ public interface TopicMapper {
 	int saveTopic(Map<String, Object> topicMap);
 	List<Map<String,Object>> showTopicList(Map<String, Object> topicMap);
 	List<Map<String,Object>> showTopicListByWriterId(Map<String, Object> topicMap);
+	int modifyTopic(Map<String, Object> topicMap);
+	int removeTopic(Map<String, Object> topicMap);
 }

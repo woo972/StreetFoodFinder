@@ -47,5 +47,14 @@
 	order by cre_date desc, cre_time desc		
 </select>
 
+<update id="modifyTopic" parameterType="java.util.Map">
+	update topic 
+		set title=#{title}, content=#{content}, upd_date=#{updDate}, upd_time =#{updTime}
+		where topic.topic_id =#{topicId}
+</update>
+
+<delete id="removeTopic" parameterType="java.util.Map">
+	delete from topic where topic_id=#{topicId}
+</delete>
 
 </mapper>
